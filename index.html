@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gulp Starter</title>
+  <!--  Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,900|Raleway:300,400,500|Ubuntu:500" rel="stylesheet">
+  <!--  Icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!--  Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!--  AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+  <!--  CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!--  jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!--  Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header role="banner" class="header">
+    <div class="header__wrapper">
+      <div class="header__container">
+        <a href="/" class="logo__wrapper">
+          <div class="logo__container">
+            <!-- <svg></svg> -->
+          </div>
+        </a>
+        <nav class="top-nav">
+          <div class="top-nav__mobile-toggle">
+            <div class="top-nav__hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="top-nav__list__wrapper">
+            <div class="top-nav__list__container">
+              <ul class="top-nav__list">
+                <li><a class="top-nav__link" href="#about">About</a></li>
+                <li><a class="top-nav__link" href="#portfolio">Portfolio</a></li>
+                <li><a class="top-nav__link" href="#capabilities">Capabilities</a></li>
+                <li><a class="top-nav__cta" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- <nav class="navbar__wrapper">
+    <input type="checkbox" id="toggle">
+    <ul class="navbar__container">
+        <li>
+            <a href="#about">About</a>
+        </li>
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+        <li>
+            <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+    </ul>
+    <label class="nav__label" for="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+    </label>
+  </nav> -->
+  <!-- full-width container -->
+  <div class="container-fluid mainContent">
+    <!-- 100% width of container: xs-lg -->
+    <div class="col-lg-12 py-5"
+    data-aos="fade-down"
+    data-aos-delay="100"
+    data-aos-duration="1000">
+      <h1>Gulp Starter</h1>
+      <button class="btn btn-light btn-lg my-3 mx-3" type="button">
+        Button
+      </button>
+      <button class="btn btn-dark btn-lg my-3 mx-3" type="button">
+        Button
+      </button>
+    </div>
+  </div>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="./js/script.js"></script>
+</body>
+</html>
