@@ -26,15 +26,33 @@ a:hover {
   text-decoration: none; }
 
 body {
-  background-color: #93ABDF;
+  background-color: white;
   text-align: center; }
 
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 400; }
+  body h1 {
+    font-weight: 300; }
 
 .container {
   padding: 7% 15%; }
+
+.button {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  background-color: #15191B;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 2px;
+  transition: all 150ms;
+  border: 1px solid transparent; }
+
+.button:hover {
+  background-color: white;
+  color: #15191B;
+  border: 1px solid #15191B; }
 
 .btn:focus {
   box-shadow: none; }
@@ -44,7 +62,8 @@ body {
   z-index: 500;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  background: white; }
 
 .header__wrapper {
   background-color: transparent; }
@@ -139,16 +158,16 @@ span:nth-child(3) {
     align-items: flex-start;
     padding: 60px 20px 0px; } }
 
-li {
+.top-nav__list li {
   display: inline-block; }
 
 @media (max-width: 850px) {
-  li {
+  .top-nav__list li {
     margin-bottom: 20px; }
-  li:nth-child(3) {
+  .top-nav__list li:nth-child(3) {
     margin-bottom: 30px; } }
 
-li:not(:last-child) {
+.top-nav__list li:not(:last-child) {
   margin-right: 48px; }
 
 .top-nav__link {
@@ -183,9 +202,204 @@ li:not(:last-child) {
   .top-nav__cta {
     font-size: 0.9rem; } }
 
-.mainContent {
-  padding-top: 88px;
-  padding-bottom: 1000px; }
+#hero {
+  margin-top: 88px;
+  background-image: url("https://i.imgur.com/Y5d47bB.jpg");
+  z-index: -5;
+  background-repeat: no-repeat;
+  background-size: auto 100vw;
+  background-position: 0 -588px;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  #hero h1, #hero h2 {
+    font-weight: 700;
+    font-size: 50px;
+    font-family: 'roboto', sans-serif;
+    color: white; }
+  #hero h2 {
+    font-size: 40px; }
 
-h1 {
-  font-weight: 300; }
+#about {
+  padding-top: 80px;
+  position: relative;
+  max-width: 1000px; }
+  #about h1 {
+    font-weight: 500; }
+  #about .about__container {
+    display: flex;
+    align-items: center;
+    max-width: 1020px;
+    margin: 40px auto 0; }
+    #about .about__container .about-image__wrapper {
+      border-radius: 50%;
+      border: 3px solid #F5F5F5;
+      width: 150px;
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden;
+      box-shadow: 0 2px 3px 0 lightgray; }
+      #about .about__container .about-image__wrapper img {
+        width: 150px; }
+    #about .about__container .about__text__container {
+      max-width: 600px; }
+      #about .about__container .about__text__container p {
+        color: black;
+        font-weight: 500; }
+
+#portfolio {
+  padding-top: 80px; }
+  #portfolio #portfolio__container h1 {
+    font-weight: 500; }
+  #portfolio #portfolio__container li {
+    display: inline-block; }
+  #portfolio #portfolio__container #filter__buttons {
+    margin-top: 40px; }
+    #portfolio #portfolio__container #filter__buttons li:not(:last-child) {
+      margin-right: 20px; }
+    #portfolio #portfolio__container #filter__buttons .button {
+      background-color: white;
+      border: 1px solid #15191B;
+      color: #15191B;
+      background: none;
+      font-weight: bold;
+      position: relative;
+      transition: color 0.25s ease; }
+    #portfolio #portfolio__container #filter__buttons .button::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #15191B;
+      transform-origin: left;
+      transition: width 0.25s ease-in-out;
+      z-index: -1; }
+    #portfolio #portfolio__container #filter__buttons .current {
+      background-color: #15191B;
+      border: 1px solid transparent;
+      color: white; }
+    #portfolio #portfolio__container #filter__buttons .button:not(.current):hover {
+      color: white;
+      border: 1px solid #15191B; }
+    #portfolio #portfolio__container #filter__buttons .button:hover::after {
+      width: 100%; }
+  #portfolio #portfolio__container #portfolio__items__container {
+    width: 100%;
+    margin-top: 40px; }
+    #portfolio #portfolio__container #portfolio__items__container .portfolio__items {
+      width: 1020px;
+      margin-right: auto;
+      margin-left: auto; }
+      #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item {
+        margin: 20px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+        position: relative; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper {
+          background-color: rgba(51, 71, 93, 0.6);
+          overflow: hidden;
+          position: relative; }
+          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper .item__image {
+            width: 300px; }
+          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper .item__icon {
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__image {
+          opacity: 0.4;
+          transform: scale(1.09);
+          scale: 1.05;
+          transition: opacity 0s,  transform 0.25s linear; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__icon {
+          opacity: 1;
+          transition: opacity, 0.25s; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container {
+          font-family: "Montserrat", serif;
+          background-color: white;
+          height: 80px;
+          padding: 20px 0; }
+          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container p {
+            padding: 0;
+            margin: 0; }
+          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__title {
+            color: black;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px; }
+          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__description {
+            font-size: 12px;
+            color: #7f8c8d; }
+
+#capabilities {
+  padding-top: 80px; }
+  #capabilities .capabilities__container {
+    max-width: 1020px;
+    margin: 0 auto; }
+    #capabilities .capabilities__container h1 {
+      font-weight: 500; }
+    #capabilities .capabilities__container .capabilities__desc {
+      margin: 40px auto 0;
+      font-weight: 500;
+      width: 600px; }
+    #capabilities .capabilities__container #info-icons {
+      margin-top: 40px; }
+      #capabilities .capabilities__container #info-icons .info-icon {
+        position: relative;
+        width: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 0px 0px 7px 7px;
+        display: inline-block;
+        margin: 10px 17px; }
+        #capabilities .capabilities__container #info-icons .info-icon img {
+          height: 50px; }
+        #capabilities .capabilities__container #info-icons .info-icon p {
+          margin-top: 9px;
+          margin-bottom: 0;
+          font-size: 12px; }
+    #capabilities .capabilities__container .info-icon:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100%;
+      width: 40px;
+      height: 0;
+      border-bottom: 1px dashed black; }
+    #capabilities .capabilities__container #tech-icons .tech-icons__container {
+      max-width: 800px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 40px; }
+      #capabilities .capabilities__container #tech-icons .tech-icons__container img {
+        height: 60px;
+        margin: 20px 40px; }
+
+footer {
+  height: 100px;
+  background: #15191B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; }
+  footer .footer__container {
+    width: 1000px; }
+    footer .footer__container i {
+      color: white;
+      font-size: 30px;
+      margin-right: 10px; }
+    footer .footer__container p {
+      font-size: 12px;
+      margin: 0;
+      color: white;
+      margin-right: 10px;
+      position: relative;
+      top: 8px; }

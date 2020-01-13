@@ -1,0 +1,60 @@
+#capabilities {
+    padding-top: 80px;
+    .capabilities__container {
+        max-width: 1020px;
+        margin: 0 auto;
+        h1 {
+            font-weight: 500;
+        }
+        .capabilities__desc {
+            margin: 40px auto 0;
+            font-weight: 500;
+            width: 600px;
+        }
+
+        #info-icons {
+            margin-top: 40px;
+            .info-icon {
+                position: relative;
+                width: 100px;
+                padding: 10px;
+                border: 1px solid black;
+                border-radius: 0px 0px 7px 7px;
+                display: inline-block;
+                margin: 10px 17px;
+                img {
+                    height: 50px;
+                }
+                p {
+                    margin-top: 9px;
+                    margin-bottom: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+        .info-icon:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 100%;
+            width: 40px;
+            height: 0;
+            border-bottom: 1px dashed black;
+        }
+
+        #tech-icons {
+            .tech-icons__container {
+                max-width: 800px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 40px;
+
+                img {
+                    height: 60px;
+                    margin: 20px 40px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+#about {
+    padding-top: 80px;
+    position: relative;
+    max-width: 1000px;
+    h1 {
+        font-weight: 500;
+    }
+    .about__container {
+        display: flex;
+        align-items: center;
+        max-width: 1020px;
+        margin: 40px auto 0;
+        .about-image__wrapper {
+            border-radius: 50%;
+            border: 3px solid #F5F5F5;
+            width: 150px;
+            height: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            box-shadow: 0 2px 3px 0 lightgray;
+            img {
+                width: 150px;
+            }
+        }
+        .about__text__container {
+            max-width: 600px;
+            p {
+                color: black;
+                font-weight: 500;
+            }
+        }
+    }
+}

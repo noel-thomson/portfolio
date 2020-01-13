@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gulp Starter</title>
   <!--  Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,900|Raleway:300,400,500|Ubuntu:500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,900|Raleway:300,400,500,600,700|Roboto:700" rel="stylesheet">
   <!--  Icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <!--  Bootstrap -->
@@ -44,7 +44,7 @@
                 <li><a class="top-nav__link" href="#about">About</a></li>
                 <li><a class="top-nav__link" href="#portfolio">Portfolio</a></li>
                 <li><a class="top-nav__link" href="#capabilities">Capabilities</a></li>
-                <li><a class="top-nav__cta" href="#contact">Contact</a></li>
+                <li><a class="top-nav__cta button" href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -53,44 +53,156 @@
     </div>
   </header>
 
-  <!-- <nav class="navbar__wrapper">
-    <input type="checkbox" id="toggle">
-    <ul class="navbar__container">
-        <li>
-            <a href="#about">About</a>
-        </li>
-        <li>
-            <a href="#skills">Skills</a>
-        </li>
-        <li>
-            <a href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-            <a href="#contact">Contact</a>
-        </li>
-    </ul>
-    <label class="nav__label" for="toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-    </label>
-  </nav> -->
-  <!-- full-width container -->
-  <div class="container-fluid mainContent">
-    <!-- 100% width of container: xs-lg -->
-    <div class="col-lg-12 py-5"
-    data-aos="fade-down"
-    data-aos-delay="100"
-    data-aos-duration="1000">
-      <h1>Gulp Starter</h1>
-      <button class="btn btn-light btn-lg my-3 mx-3" type="button">
-        Button
-      </button>
-      <button class="btn btn-dark btn-lg my-3 mx-3" type="button">
-        Button
-      </button>
+  <section id="hero">
+    <h1>Noel Thomson</h1>
+    <h2>Web Developer</h2>
+  </section>
+  
+  <div id="mainContent">
+
+    <div class="container-fluid" id="about">
+      <h1>About</h1>
+      <div class="about__container">
+        <div class="about-image__wrapper">
+          <img src="./imgs/noel.jpg" alt="">
+        </div>
+        <div class="about__text__container">
+          <p>Since my first web project rendered in the browser, 
+            I've been captivated by web development. 
+            The engaging challenge and level of detail involved in 
+            [role objective] is something that I've become truly 
+            passionate about. Below are recent projects I've completed
+             that showcase my skillset as a web developer.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="portfolio">
+      <div id="portfolio__container">
+    
+        <h1>Portfolio</h1>
+    
+        <div>
+          <ul id="filter__buttons">
+            <li><a href="#" data-filter="*" class="current filter button">All</a></li>
+            <li><a href="#" data-filter=".apps" class="filter button">Applications</a></li>
+            <li><a href="#" data-filter=".emails" class="filter button">HTML Emails</a></li>
+            <li><a href="#" data-filter=".pages" class="filter button">Landing Pages</a></li>
+          </ul>
+        </div>
+    
+        <div id="portfolio__items__container">
+          <ul class="portfolio__items">
+    
+            <li class="item apps">
+              <div class="item__wrapper">
+                <a href="https://noel-thomson.github.io/blackjack-app/" target="blank">
+                  <img class="item__image" src="./imgs/mockup-blackjack.png" alt="">
+                  <img class="item__icon" src="./imgs/smartphone-call.svg" alt="">
+                </a>
+              </div>
+              <div class="item__info__container">
+                <p class="item__title">Blackjack</p>
+                <p class="item__description">Javascript Application</p>
+              </div>
+            </li>
+    
+            <li class="item pages">
+              <div class="item__wrapper">
+                <a href="https://noel-thomson.github.io/spotify-landing-page/" target="blank">
+                  <img class="item__image" src="./imgs/mockup-spotify.png" alt="">
+                  <img class="item__icon" src="./imgs/responsive-design-symbol.svg" alt="">
+                </a>
+              </div>
+              <div class="item__info__container">
+                <p class="item__title">Spotify</p>
+                <p class="item__description">Landing Page</p>
+              </div>
+            </li>
+    
+            <li class="item emails">
+              <div class="item__wrapper">
+                <a href="https://noel-thomson.github.io/kayak-email-campaign/" target="blank">
+                  <img class="item__image" src="./imgs/mockup-kayak.png" alt="">
+                  <img class="item__icon" src="./imgs/open-mail.svg" alt="">
+                </a>
+              </div>
+              <div class="item__info__container">
+                <p class="item__title">Kayak</p>
+                <p class="item__description">Promotional Email</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid" id="capabilities">
+      <div class="capabilities__container">
+        <h1>Capabilites</h1>
+    
+        <p class="capabilities__desc">Since my first web project rendered in the browser,
+          I've been captivated by web development.
+          The engaging challenge and level of detail involved in
+          [role objective] is something that I've become truly
+          passionate about. Below are recent projects I've completed
+          that showcase my skillset as a web developer.
+        </p>
+
+        <div id="info-icons">
+          <div class="info-icons__container">
+            <div class="info-icon">
+              <img src="./imgs/info-icons/speech.png" alt="">
+              <p>Research</p>
+            </div>
+            <div class="info-icon">
+              <img src="./imgs/info-icons/prototype.png" alt="">
+              <p>Design</p>
+            </div>
+            <div class="info-icon">
+              <img src="./imgs/info-icons/laptop.png" alt="">
+              <p>Create</p>
+            </div>
+            <div class="info-icon">
+              <img src="./imgs/info-icons/responsive.png" alt="">
+              <p>Test</p>
+            </div>
+            <div class="info-icon">
+              <img src="./imgs/info-icons/goal.png" alt="">
+              <p>Deploy</p>
+            </div>
+          </div>
+        </div>
+    
+        <div id="tech-icons">
+          <div class="tech-icons__container">
+            <img src="./imgs/tech-icons/icon-html5.svg" alt="">
+            <img src="./imgs/tech-icons/icon-css3.svg" alt="">
+            <img src="./imgs/tech-icons/icon-javascript.svg" alt="">
+            <img src="./imgs/tech-icons/icon-sass.svg" alt="">
+            <img src="./imgs/tech-icons/icon-nodejs.svg" alt="">
+            <img src="./imgs/tech-icons/icon-gulp.svg" alt="">
+            <img src="./imgs/tech-icons/icon-mongodb.svg" alt="">
+            <img src="./imgs/tech-icons/icon-jquery.svg" alt="">
+            <img src="./imgs/tech-icons/icon-photoshop.svg" alt="">
+            <img src="./imgs/tech-icons/icon-react.svg" alt="">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+  <footer>
+    <div class="footer__container">
+      <i class="fab fa-linkedin"></i>
+      <i class="fab fa-github-square"></i>
+      <p>&copy 2020 Noel Thomson</p>
+    </div>
+  </footer>
+
+  <!-- isotope plugin -->
+  <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
 
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -100,3 +212,7 @@
   <script src="./js/script.js"></script>
 </body>
 </html>
+
+<!-- data-aos="fade-down"
+data-aos-delay="100"
+data-aos-duration="1000" -->
