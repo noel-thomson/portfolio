@@ -204,12 +204,13 @@ span:nth-child(3) {
 
 #hero {
   margin-top: 88px;
+  background: #15191B;
   background-image: url("https://i.imgur.com/Y5d47bB.jpg");
-  z-index: -5;
+  z-index: -1;
   background-repeat: no-repeat;
-  background-size: auto 100vw;
-  background-position: 0 -588px;
-  height: 300px;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -226,32 +227,47 @@ span:nth-child(3) {
 #about {
   padding-top: 80px;
   position: relative;
-  max-width: 1000px; }
+  max-width: 1020px; }
   #about h1 {
     font-weight: 500; }
   #about .about__container {
     display: flex;
     align-items: center;
+    justify-content: center;
     max-width: 1020px;
     margin: 40px auto 0; }
-    #about .about__container .about-image__wrapper {
+    #about .about__container .about__image__container {
       border-radius: 50%;
       border: 3px solid #F5F5F5;
-      width: 150px;
-      height: 150px;
-      margin-left: auto;
-      margin-right: auto;
+      min-width: 150px;
+      height: 156px;
+      margin-left: 20px;
+      margin-right: 20px;
       overflow: hidden;
       box-shadow: 0 2px 3px 0 lightgray; }
-      #about .about__container .about-image__wrapper img {
+      #about .about__container .about__image__container img {
         width: 150px; }
     #about .about__container .about__text__container {
-      max-width: 600px; }
+      max-width: 600px;
+      margin-right: 20px; }
       #about .about__container .about__text__container p {
         color: black;
         font-weight: 500; }
+  @media (max-width: 530px) {
+    #about .about__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      #about .about__container .about__image__container {
+        margin-bottom: 20px; }
+      #about .about__container .about__text__container {
+        margin-left: 20px; } }
 
-#portfolio {
+#portfolio #portfolio__container {
+  max-width: 1020px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 80px; }
   #portfolio #portfolio__container h1 {
     font-weight: 500; }
@@ -292,51 +308,84 @@ span:nth-child(3) {
   #portfolio #portfolio__container #portfolio__items__container {
     width: 100%;
     margin-top: 40px; }
-    #portfolio #portfolio__container #portfolio__items__container .portfolio__items {
-      width: 1020px;
-      margin-right: auto;
-      margin-left: auto; }
-      #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item {
-        margin: 20px;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item {
+      margin: 20px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+      position: relative; }
+      #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper {
+        background-color: rgba(51, 71, 93, 0.6);
+        overflow: hidden;
         position: relative; }
-        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper {
-          background-color: rgba(51, 71, 93, 0.6);
-          overflow: hidden;
-          position: relative; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper .item__image {
-            width: 300px; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper .item__icon {
-            height: 60px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0; }
-        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__image {
-          opacity: 0.4;
-          transform: scale(1.09);
-          scale: 1.05;
-          transition: opacity 0s,  transform 0.25s linear; }
-        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__icon {
-          opacity: 1;
-          transition: opacity, 0.25s; }
-        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container {
-          font-family: "Montserrat", serif;
-          background-color: white;
-          height: 80px;
-          padding: 20px 0; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container p {
-            padding: 0;
-            margin: 0; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__title {
-            color: black;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__description {
-            font-size: 12px;
-            color: #7f8c8d; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper .item__image {
+          width: 300px; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper .item__icon {
+          height: 60px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          opacity: 0; }
+      #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__image {
+        opacity: 0.4;
+        transform: scale(1.09);
+        scale: 1.05;
+        transition: opacity 0s,  transform 0.25s linear; }
+      #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__icon {
+        opacity: 1;
+        transition: opacity, 0.25s; }
+      #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container {
+        font-family: "Montserrat", serif;
+        background-color: white;
+        height: 80px;
+        padding: 20px 0; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container p {
+          padding: 0;
+          margin: 0; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__title {
+          color: black;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px; }
+        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__description {
+          font-size: 12px;
+          color: #7f8c8d; }
+
+@media (max-width: 1050px) {
+  #portfolio #portfolio__items__container {
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: auto; } }
+
+@media (max-width: 620px) {
+  #portfolio li {
+    margin-right: 5px !important; }
+    #portfolio li .button {
+      padding: 10px 15px; } }
+
+@media (max-width: 560px) {
+  #portfolio #filter__buttons {
+    max-width: 250px;
+    margin-right: auto;
+    margin-left: auto; }
+    #portfolio #filter__buttons li {
+      margin-bottom: 20px; }
+    #portfolio #filter__buttons li:nth-of-type(3), #portfolio #filter__buttons li:nth-of-type(4) {
+      margin-bottom: 0px; } }
+
+@media (max-width: 400px) {
+  #portfolio #portfolio__items__container {
+    max-width: 290px; }
+    #portfolio #portfolio__items__container .portfolio__items .item {
+      margin: 20px !important; }
+      #portfolio #portfolio__items__container .portfolio__items .item .item__wrapper .item__image {
+        width: 250px !important; }
+      #portfolio #portfolio__items__container .portfolio__items .item .item__wrapper .item__icon {
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0; } }
 
 #capabilities {
   padding-top: 80px; }
@@ -348,7 +397,7 @@ span:nth-child(3) {
     #capabilities .capabilities__container .capabilities__desc {
       margin: 40px auto 0;
       font-weight: 500;
-      width: 600px; }
+      max-width: 600px; }
     #capabilities .capabilities__container #info-icons {
       margin-top: 40px; }
       #capabilities .capabilities__container #info-icons .info-icon {
@@ -360,7 +409,7 @@ span:nth-child(3) {
         display: inline-block;
         margin: 10px 17px; }
         #capabilities .capabilities__container #info-icons .info-icon img {
-          height: 50px; }
+          height: 40px; }
         #capabilities .capabilities__container #info-icons .info-icon p {
           margin-top: 9px;
           margin-bottom: 0;
@@ -382,6 +431,36 @@ span:nth-child(3) {
       #capabilities .capabilities__container #tech-icons .tech-icons__container img {
         height: 60px;
         margin: 20px 40px; }
+    @media (max-width: 750px) {
+      #capabilities .capabilities__container #info-icons .info-icon {
+        width: 80px;
+        padding: 5px;
+        margin: 10px 5px; }
+        #capabilities .capabilities__container #info-icons .info-icon img {
+          height: 30px; }
+        #capabilities .capabilities__container #info-icons .info-icon p {
+          margin-top: 9px;
+          margin-bottom: 0;
+          font-size: 10px; }
+      #capabilities .capabilities__container #info-icons .info-icon:not(:last-child)::after {
+        width: 15px; }
+      #capabilities .capabilities__container #tech-icons .tech-icons__container {
+        max-width: 380px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 40px; }
+        #capabilities .capabilities__container #tech-icons .tech-icons__container img {
+          height: 40px;
+          margin: 15px 10px; } }
+    @media (max-width: 405px) {
+      #capabilities .capabilities__container #info-icons .info-icon:nth-of-type(3) {
+        display: none; }
+      #capabilities .capabilities__container #info-icons .info-icon:not(:last-child)::after {
+        width: 15px; } }
+    @media (max-width: 350px) {
+      #capabilities .capabilities__container .tech-icons__container img {
+        height: 40px;
+        margin: 15px 5px !important; } }
 
 footer {
   height: 100px;
@@ -394,12 +473,12 @@ footer {
     width: 1000px; }
     footer .footer__container i {
       color: white;
-      font-size: 30px;
-      margin-right: 10px; }
+      font-size: 35px; }
+    footer .footer__container .fa-linkedin {
+      margin-right: 20px; }
     footer .footer__container p {
       font-size: 12px;
       margin: 0;
       color: white;
-      margin-right: 10px;
       position: relative;
       top: 8px; }
