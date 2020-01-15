@@ -1,10 +1,9 @@
 #portfolio {
-
+    padding-top: 80px;
     #portfolio__container {
         max-width: 1020px;
         margin-right: auto;
         margin-left: auto;
-        padding-top: 80px;
 
         h1 {
             font-weight: 500;
@@ -15,7 +14,7 @@
         }
 
         #filter__buttons {
-            margin-top: 40px;
+            margin-top: 60px;
 
             li:not(:last-child) {
                 margin-right: 20px;

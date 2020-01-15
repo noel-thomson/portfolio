@@ -10,6 +10,23 @@
             margin: 40px auto 0;
             font-weight: 500;
             max-width: 600px;
+            font-size: 20px;
+            line-height: 2;
+            font-size: 20px;
+            .text__underline {
+                position: relative;
+                background: inherit;
+                font-weight: 600;
+                white-space: nowrap;
+                .underline {
+                    background: #D3DEEE;
+                    position: absolute;
+                    top: 12px;
+                    right: 2px;
+                    z-index: -1;
+                    height: 0.55em;
+                };
+            }
         }
 
         #info-icons {
