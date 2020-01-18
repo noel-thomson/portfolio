@@ -1,25 +1,28 @@
 footer {
-    height: 100px;
-    background: $black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    .footer__container {
-        width: 1000px;
-        i {
-            color: white;
-            font-size: 35px;
-        }
-        .fa-linkedin {
-            margin-right: 20px;
-        }
-        p {
-            font-size: 12px;
-            margin: 0;
-            color: white;
-            position: relative;
-            top: 8px;
-        }
+  height: 100px;
+  background: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  .footer__container {
+    width: 1000px;
+    i {
+      color: white;
+      font-size: 35px;
     }
+    .fa-linkedin {
+      margin-right: 20px;
+    }
+    p {
+      font-size: 12px;
+      margin: 0;
+      color: white;
+      position: relative;
+      top: 8px;
+      a {
+        color: white;
+      }
+    }
+  }
 }

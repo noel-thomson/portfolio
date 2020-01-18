@@ -173,7 +173,8 @@ span:nth-child(3) {
 .top-nav__link {
   color: #15191B;
   font-size: 14px;
-  letter-spacing: 0.75px; }
+  letter-spacing: 0.75px;
+  font-weight: 500; }
 
 .top-nav__link:hover {
   color: #15191B; }
@@ -302,7 +303,7 @@ span:nth-child(3) {
         transition: color 0.25s ease; }
       #portfolio #portfolio__container #filter__buttons .button::after {
         position: absolute;
-        content: '';
+        content: "";
         top: 0;
         left: 0;
         width: 0;
@@ -321,8 +322,10 @@ span:nth-child(3) {
       #portfolio #portfolio__container #filter__buttons .button:hover::after {
         width: 100%; }
     #portfolio #portfolio__container #portfolio__items__container {
-      width: 100%;
-      margin-top: 40px; }
+      margin-top: 40px;
+      max-width: 680px;
+      margin-right: auto;
+      margin-left: auto; }
       #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item {
         margin: 20px;
         box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
@@ -344,7 +347,7 @@ span:nth-child(3) {
           opacity: 0.4;
           transform: scale(1.09);
           scale: 1.05;
-          transition: opacity 0s,  transform 0.25s linear; }
+          transition: opacity 0s, transform 0.25s linear; }
         #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__icon {
           opacity: 1;
           transition: opacity, 0.25s; }
@@ -366,7 +369,7 @@ span:nth-child(3) {
             color: #7f8c8d; }
   @media (max-width: 1050px) {
     #portfolio #portfolio__items__container {
-      max-width: 340px;
+      max-width: 340px !important;
       margin-right: auto;
       margin-left: auto; } }
   @media (max-width: 620px) {
@@ -381,7 +384,8 @@ span:nth-child(3) {
       margin-left: auto; }
       #portfolio #filter__buttons li {
         margin-bottom: 20px; }
-      #portfolio #filter__buttons li:nth-of-type(3), #portfolio #filter__buttons li:nth-of-type(4) {
+      #portfolio #filter__buttons li:nth-of-type(3),
+      #portfolio #filter__buttons li:nth-of-type(4) {
         margin-bottom: 0px; } }
   @media (max-width: 400px) {
     #portfolio #portfolio__items__container {
@@ -508,3 +512,5 @@ footer {
       color: white;
       position: relative;
       top: 8px; }
+      footer .footer__container p a {
+        color: white; }
