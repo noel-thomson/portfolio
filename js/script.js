@@ -12,36 +12,34 @@ mobileToggle.addEventListener("click", function() {
 
 for (const el of filters) {
   el.addEventListener("click", function() {
-    currentFilter.classList.remove("current"); 
+    currentFilter.classList.remove("current");
     this.classList.add("current");
     currentFilter = this;
   });
 }
 
-$(function(){
-  
+$(function() {
   $(".portfolio__items").isotope({
-    filter: '*',
+    filter: "*",
     animationOptions: {
       duration: 1500,
-      easing: 'linear',
+      easing: "linear",
       queue: false
     }
   });
 
   $("#filter__buttons a").click(function() {
     let selector = $(this).attr("data-filter");
-    
+
     $(".portfolio__items").isotope({
       filter: selector,
       animationOptions: {
         duration: 1500,
-        easing: 'linear',
+        easing: "linear",
         queue: false
       }
     });
 
     return false;
-
   });
 });
