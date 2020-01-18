@@ -1,128 +1,128 @@
 #capabilities {
-    padding-top: 80px;
-    .capabilities__container {
-        max-width: 1020px;
-        margin: 0 auto;
-        h1 {
-            font-weight: 500;
+  padding-top: 80px;
+  .capabilities__container {
+    max-width: 1020px;
+    margin: 0 auto;
+    h1 {
+      font-weight: 500;
+    }
+    .capabilities__desc {
+      margin: 40px auto 0;
+      font-weight: 500;
+      max-width: 600px;
+      font-size: 20px;
+      line-height: 2;
+      font-size: 20px;
+      .text__underline {
+        position: relative;
+        background: inherit;
+        font-weight: 600;
+        white-space: nowrap;
+        .underline {
+          background: #d3deee;
+          position: absolute;
+          top: 12px;
+          right: 2px;
+          z-index: -1;
+          height: 0.55em;
         }
-        .capabilities__desc {
-            margin: 40px auto 0;
-            font-weight: 500;
-            max-width: 600px;
-            font-size: 20px;
-            line-height: 2;
-            font-size: 20px;
-            .text__underline {
-                position: relative;
-                background: inherit;
-                font-weight: 600;
-                white-space: nowrap;
-                .underline {
-                    background: #D3DEEE;
-                    position: absolute;
-                    top: 12px;
-                    right: 2px;
-                    z-index: -1;
-                    height: 0.55em;
-                };
-            }
-        }
+      }
+    }
 
-        #info-icons {
-            margin-top: 40px;
-            .info-icon {
-                position: relative;
-                width: 100px;
-                padding: 10px;
-                border: 1px solid black;
-                border-radius: 0px 0px 7px 7px;
-                display: inline-block;
-                margin: 10px 17px;
-                img {
-                    height: 40px;
-                }
-                p {
-                    margin-top: 9px;
-                    margin-bottom: 0;
-                    font-size: 12px;
-                }
-            }
+    #info-icons {
+      margin-top: 40px;
+      .info-icon {
+        position: relative;
+        width: 100px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 0px 0px 7px 7px;
+        display: inline-block;
+        margin: 10px 17px;
+        img {
+          height: 40px;
+        }
+        p {
+          margin-top: 9px;
+          margin-bottom: 0;
+          font-size: 12px;
+        }
+      }
+    }
+    .info-icon:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100%;
+      width: 40px;
+      height: 0;
+      border-bottom: 1px dashed black;
+    }
+
+    #tech-icons {
+      .tech-icons__container {
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 40px;
+
+        img {
+          height: 60px;
+          margin: 20px 40px;
+        }
+      }
+    }
+    @media (max-width: 750px) {
+      #info-icons {
+        .info-icon {
+          width: 80px;
+          padding: 5px;
+          margin: 10px 5px;
+          img {
+            height: 30px;
+          }
+          p {
+            margin-top: 9px;
+            margin-bottom: 0;
+            font-size: 10px;
+          }
         }
         .info-icon:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 100%;
-            width: 40px;
-            height: 0;
-            border-bottom: 1px dashed black;
+          width: 15px;
         }
+      }
+      #tech-icons {
+        .tech-icons__container {
+          max-width: 380px;
+          margin-right: auto;
+          margin-left: auto;
+          margin-top: 40px;
 
-        #tech-icons {
-            .tech-icons__container {
-                max-width: 800px;
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 40px;
-
-                img {
-                    height: 60px;
-                    margin: 20px 40px;
-                }
-            }
+          img {
+            height: 40px;
+            margin: 15px 10px;
+          }
         }
-        @media (max-width: 750px) {
-            #info-icons {
-                .info-icon {
-                    width: 80px;
-                    padding: 5px;
-                    margin: 10px 5px;
-                    img {
-                        height: 30px;
-                    }
-                    p {
-                        margin-top: 9px;
-                        margin-bottom: 0;
-                        font-size: 10px;
-                    }
-                }
-                .info-icon:not(:last-child)::after {
-                    width: 15px;
-                }
-            }
-            #tech-icons {
-                .tech-icons__container {
-                    max-width: 380px;
-                    margin-right: auto;
-                    margin-left: auto;
-                    margin-top: 40px;
-
-                    img {
-                        height: 40px;
-                        margin: 15px 10px;
-                    }
-                }
-            }
-        }
-        @media (max-width: 405px) {
-            #info-icons {
-                .info-icon:nth-of-type(3) {
-                    display: none;
-                }
-                .info-icon:not(:last-child)::after {
-                    width: 15px;
-                }
-            }
-        }
-        @media (max-width: 350px) {
-            .tech-icons__container {
-                img {
-                    height: 40px;
-                    margin: 15px 5px !important;
-                }
-            }
-        }
+      }
     }
+    @media (max-width: 405px) {
+      #info-icons {
+        .info-icon:nth-of-type(3) {
+          display: none;
+        }
+        .info-icon:not(:last-child)::after {
+          width: 15px;
+        }
+      }
+    }
+    @media (max-width: 350px) {
+      .tech-icons__container {
+        img {
+          height: 40px;
+          margin: 15px 5px !important;
+        }
+      }
+    }
+  }
 }

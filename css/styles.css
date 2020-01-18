@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   width: 100%;
   height: 100%; }
 
@@ -6,7 +7,9 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit; }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -34,6 +37,17 @@ body {
   font-weight: 400; }
   body h1 {
     font-weight: 300; }
+  body .text__underline {
+    position: relative;
+    background: inherit;
+    white-space: nowrap; }
+    body .text__underline .underline {
+      background: #d3deee;
+      opacity: 0.7;
+      position: absolute;
+      top: 0.8em;
+      z-index: -1;
+      height: 0.3em; }
 
 .container {
   padding: 7% 15%; }
@@ -424,7 +438,7 @@ span:nth-child(3) {
         font-weight: 600;
         white-space: nowrap; }
         #capabilities .capabilities__container .capabilities__desc .text__underline .underline {
-          background: #D3DEEE;
+          background: #d3deee;
           position: absolute;
           top: 12px;
           right: 2px;
