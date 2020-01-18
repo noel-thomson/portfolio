@@ -44,4 +44,8 @@ $(function() {
   });
 });
 
-$(window).load(function() {});
+$(".portfolio__items")
+  .imagesLoaded()
+  .progress(function() {
+    $(".portfolio__items").isotope("layout");
+  });
