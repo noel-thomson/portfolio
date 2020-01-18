@@ -18,6 +18,8 @@ for (const el of filters) {
   });
 }
 
+$(window).load(function() {});
+
 $(function() {
   $(".portfolio__items").isotope({
     filter: "*",
