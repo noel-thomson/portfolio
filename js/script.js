@@ -30,10 +30,11 @@ for (const el of filters) {
 $(function() {
   $(".portfolio__items").isotope({
     filter: "*",
+    layoutMode: "fitRows",
     animationOptions: {
       duration: 1500,
-      easing: "linear",
-      queue: false
+      easing: "linear"
+      // queue: false
     }
   });
 
@@ -42,10 +43,11 @@ $(function() {
 
     $(".portfolio__items").isotope({
       filter: selector,
+      layoutMode: "fitRows",
       animationOptions: {
         duration: 1500,
-        easing: "linear",
-        queue: false
+        easing: "linear"
+        // queue: false
       }
     });
 

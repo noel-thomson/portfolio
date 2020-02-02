@@ -353,6 +353,7 @@ span:nth-child(3) {
     #portfolio #portfolio__container #portfolio__items__container {
       margin-top: 40px;
       max-width: 1020px;
+      height: 100%;
       margin-right: auto;
       margin-left: auto; }
       #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item {
