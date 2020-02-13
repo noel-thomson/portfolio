@@ -163,6 +163,9 @@
       margin-right: auto;
       margin-left: auto;
       .portfolio__items {
+        max-width: 290px !important;
+        margin-right: auto;
+        margin-left: auto;
         .item {
           margin: 20px !important;
 
@@ -184,10 +187,13 @@
       }
     }
   }
-  @media (max-width: 327px) {
+  @media (max-width: 326px) {
     #portfolio__items__container {
       max-width: 270px !important;
       .portfolio__items {
+        max-width: 270px !important;
+        margin-right: auto;
+        margin-left: auto;
         .item {
           margin: 10px !important;
           margin-right: auto;
