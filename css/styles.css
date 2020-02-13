@@ -188,7 +188,8 @@ span:nth-child(3) {
   color: #15191B;
   font-size: 14px;
   letter-spacing: 0.75px;
-  font-weight: 500; }
+  font-weight: 500;
+  position: relative; }
 
 .top-nav__link:hover {
   color: #15191B; }
@@ -196,6 +197,21 @@ span:nth-child(3) {
 @media (max-width: 850px) {
   .top-nav__link {
     font-size: 22px; } }
+
+.top-nav__link::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: black;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out; }
+
+.top-nav__link:hover::after {
+  transform: scaleX(1); }
 
 .top-nav__cta {
   font-weight: 600;
@@ -323,8 +339,7 @@ span:nth-child(3) {
         width: 0;
         height: 100%;
         background-color: #15191B;
-        transform-origin: left;
-        transition: width 0.25s ease-in-out;
+        transition: width 0.3s ease-in-out;
         z-index: -1; }
       #portfolio #portfolio__container #filter__buttons .current {
         background-color: #15191B;
@@ -337,13 +352,13 @@ span:nth-child(3) {
         width: 100%; }
     #portfolio #portfolio__container #portfolio__items__container {
       margin-top: 40px;
-      max-width: 680px;
+      max-width: 1020px;
+      height: 100%;
       margin-right: auto;
       margin-left: auto; }
       #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item {
         margin: 20px;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-        position: relative; }
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5); }
         #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper {
           background-color: rgba(51, 71, 93, 0.6);
           overflow: hidden;
@@ -381,11 +396,12 @@ span:nth-child(3) {
           #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__description {
             font-size: 12px;
             color: #7f8c8d; }
-  @media (max-width: 1050px) {
-    #portfolio #portfolio__items__container {
-      max-width: 340px !important;
-      margin-right: auto;
-      margin-left: auto; } }
+    @media (max-width: 1060px) {
+      #portfolio #portfolio__container #portfolio__items__container {
+        max-width: 680px !important; } }
+    @media (max-width: 720px) {
+      #portfolio #portfolio__container #portfolio__items__container {
+        max-width: 340px !important; } }
   @media (max-width: 620px) {
     #portfolio li {
       margin-right: 5px !important; }
