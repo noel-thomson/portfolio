@@ -417,6 +417,13 @@ span:nth-child(3) {
           left: 50%;
           transform: translate(-50%, -50%);
           opacity: 0; } }
+  @media (max-width: 327px) {
+    #portfolio #portfolio__items__container {
+      max-width: 270px !important; }
+      #portfolio #portfolio__items__container .portfolio__items .item {
+        margin: 10px !important;
+        margin-right: auto;
+        margin-left: auto; } }
 
 #capabilities {
   padding-top: 80px; }

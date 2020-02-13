@@ -60,7 +60,6 @@
     }
 
     #portfolio__items__container {
-      //   width: 100%;
       margin-top: 40px;
       max-width: 680px;
       margin-right: auto;
@@ -179,6 +178,18 @@
               opacity: 0;
             }
           }
+        }
+      }
+    }
+  }
+  @media (max-width: 327px) {
+    #portfolio__items__container {
+      max-width: 270px !important;
+      .portfolio__items {
+        .item {
+          margin: 10px !important;
+          margin-right: auto;
+          margin-left: auto;
         }
       }
     }
