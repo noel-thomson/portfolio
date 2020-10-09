@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Noel Thomson - Portfolio</title>
-    <link rel="shortcut icon" href="./imgs/noel.jpg" />
+    <link rel="shortcut icon" href="./imgs/headshot/noel.jpg" />
     <!--  Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,900|Raleway:300,400,500,600,700|Roboto:600,700"
@@ -96,14 +96,14 @@
       <h2>Web Developer</h2>
     </section>
 
-    <div id="mainContent">
-      <div
+    <main id="mainContent">
+      <section
         class="container-fluid"
         id="about"
         data-aos="fade-up"
         data-aos-duration="800"
         data-aos-easing="ease"
-        data-aos-once=true
+        data-aos-once="true"
       >
         <h1>
           <span class="text__underline">
@@ -113,25 +113,20 @@
         </h1>
         <div class="about__container">
           <div class="about__image__container">
-            <img src="./imgs/noel.jpg" alt="" />
+            <img src="./imgs/headshot/noel.jpg" alt="" />
           </div>
           <div class="about__text__container">
             <p>
               Thank you for visiting my portfolio website - I'm a web developer
-              with a passion for front-end solutions and
-              two years of experience creating web applications and user
-              interfaces.
+              with a passion for front-end solutions and two years of experience
+              creating web applications and user interfaces.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="container-fluid" id="portfolio">
-
+      <section class="container-fluid" id="portfolio">
         <div id="portfolio__container">
-        <div
-          id="portfolio__container"
-        >
           <h1>
             <span class="text__underline">
               Portfolio
@@ -139,39 +134,50 @@
             </span>
           </h1>
 
-          <div>
-            <ul id="filter__buttons">
-              <li>
-                <a href="#" data-filter="*" class="current filter button"
-                  >All</a
-                >
-              </li>
-              <li>
-                <a href="#" data-filter=".apps" class="filter button"
-                  >Applications</a
-                >
-              </li>
-              <li>
-                <a href="#" data-filter=".pages" class="filter button"
-                  >Landing Pages</a
-                >
-              </li>
-              <li>
-                <a href="#" data-filter=".emails" class="filter button"
-                  >HTML Emails</a
-                >
-              </li>
-            </ul>
-          </div>
+          <ul id="filter__buttons">
+            <li>
+              <a href="#" data-filter="*" class="current filter button">All</a>
+            </li>
+            <li>
+              <a href="#" data-filter=".apps" class="filter button"
+                >Applications</a
+              >
+            </li>
+            <li>
+              <a href="#" data-filter=".react" class="filter button"
+                >React Apps</a
+              >
+            </li>
+            <li>
+              <a href="#" data-filter=".pages" class="filter button"
+                >Web Pages</a
+              >
+            </li>
+            <li>
+              <a href="#" data-filter=".emails" class="filter button"
+                >HTML Email</a
+              >
+            </li>
+          </ul>
 
           <div id="portfolio__items__container">
             <ul class="portfolio__items">
-
               <li class="item apps">
                 <div class="item__wrapper">
-                  <a href="https://noel-thomson.github.io/movie-database-app/" target="blank">
-                    <img class="item__image" src="./imgs/mockups/mockup-movie-db.jpg" alt="" />
-                    <img class="item__icon" src="./imgs/smartphone-call.svg" alt="" />
+                  <a
+                    href="https://noel-thomson.github.io/movie-database-app/"
+                    target="blank"
+                  >
+                    <img
+                      class="item__image"
+                      src="./imgs/mockups/mockup-movie-db.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="item__icon"
+                      src="./imgs/overlay-icons/smartphone-call.svg"
+                      alt=""
+                    />
                   </a>
                 </div>
                 <div class="item__info__container">
@@ -179,12 +185,23 @@
                   <p class="item__description">API Application</p>
                 </div>
               </li>
-              
+
               <li class="item apps">
                 <div class="item__wrapper">
-                  <a href="https://noel-thomson.github.io/stock-photography-generator/" target="blank">
-                    <img class="item__image" src="./imgs/mockups/mockup-photo-gen.jpg" alt="" />
-                    <img class="item__icon" src="./imgs/smartphone-call.svg" alt="" />
+                  <a
+                    href="https://noel-thomson.github.io/stock-photography-generator/"
+                    target="blank"
+                  >
+                    <img
+                      class="item__image"
+                      src="./imgs/mockups/mockup-photo-gen.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="item__icon"
+                      src="./imgs/overlay-icons/smartphone-call.svg"
+                      alt=""
+                    />
                   </a>
                 </div>
                 <div class="item__info__container">
@@ -206,7 +223,7 @@
                     />
                     <img
                       class="item__icon"
-                      src="./imgs/smartphone-call.svg"
+                      src="./imgs/overlay-icons/smartphone-call.svg"
                       alt=""
                     />
                   </a>
@@ -214,6 +231,78 @@
                 <div class="item__info__container">
                   <p class="item__title">Blackjack</p>
                   <p class="item__description">Javascript Application</p>
+                </div>
+              </li>
+
+              <li class="item react">
+                <div class="item__wrapper">
+                  <a
+                    href="https://festive-blackwell-0f363b.netlify.app/"
+                    target="blank"
+                  >
+                    <img
+                      class="item__image"
+                      src="./imgs/mockups/mockup-pomodoro.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="item__icon"
+                      src="./imgs/overlay-icons/react.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="item__info__container">
+                  <p class="item__title">Pomodoro Timer</p>
+                  <p class="item__description">React Application</p>
+                </div>
+              </li>
+
+              <li class="item react">
+                <div class="item__wrapper">
+                  <a
+                    href="https://affectionate-joliot-f22628.netlify.app/"
+                    target="blank"
+                  >
+                    <img
+                      class="item__image"
+                      src="./imgs/mockups/mockup-drum-machine.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="item__icon"
+                      src="./imgs/overlay-icons/react.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="item__info__container">
+                  <p class="item__title">Drum Machine</p>
+                  <p class="item__description">React Application</p>
+                </div>
+              </li>
+
+              <li class="item react">
+                <div class="item__wrapper">
+                  <a
+                    href="https://mystifying-jang-12ffda.netlify.app/"
+                    target="blank"
+                  >
+                    <img
+                      class="item__image"
+                      src="./imgs/mockups/mockup-calculator.jpg"
+                      alt=""
+                    />
+                    <img
+                      class="item__icon"
+                      src="./imgs/overlay-icons/react.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="item__info__container">
+                  <p class="item__title">React Calculator</p>
+                  <p class="item__description">React Application</p>
                 </div>
               </li>
 
@@ -230,7 +319,7 @@
                     />
                     <img
                       class="item__icon"
-                      src="./imgs/responsive-design-symbol.svg"
+                      src="./imgs/overlay-icons/responsive-design-symbol.svg"
                       alt=""
                     />
                   </a>
@@ -252,7 +341,11 @@
                       src="./imgs/mockups/mockup-kayak.jpg"
                       alt=""
                     />
-                    <img class="item__icon" src="./imgs/open-mail.svg" alt="" />
+                    <img
+                      class="item__icon"
+                      src="./imgs/overlay-icons/open-mail.svg"
+                      alt=""
+                    />
                   </a>
                 </div>
                 <div class="item__info__container">
@@ -263,16 +356,16 @@
             </ul>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="container-fluid" id="capabilities">
+      <section class="container-fluid" id="capabilities">
         <div
           class="capabilities__container"
           data-aos="fade-right"
           data-aos-duration="800"
           data-aos-delay="0"
           data-aos-easing="ease-in-out"
-          data-aos-once=true
+          data-aos-once="true"
         >
           <h1>
             <span class="text__underline">
@@ -283,8 +376,8 @@
 
           <p class="capabilities__desc">
             I have a strong working knowledge of core web languages and
-            principles and experience working with a number of modern frameworks. 
-            Self-motivated and hard working, I'm seeking an
+            principles and experience working with a number of modern
+            frameworks. Self-motivated and hard working, I'm seeking an
             opportunity to work in a challenging environment to take my career
             as a developer to the next level.
           </p>
@@ -314,28 +407,28 @@
             <div class="tech-icons__container">
               <img src="./imgs/tech-icons/icon-html5.jpg" alt="" />
               <img src="./imgs/tech-icons/icon-css3.jpg" alt="" />
-              <img src="./imgs/tech-icons/icon-javascript.jpg" alt="" />
               <img src="./imgs/tech-icons/icon-sass.jpg" alt="" />
-              <img src="./imgs/tech-icons/icon-jquery.jpg" alt="" />
-              <img src="./imgs/tech-icons/icon-nodejs.jpg" alt="" />
-              <img src="./imgs/tech-icons/icon-gulp.jpg" alt="" />
-              <img src="./imgs/tech-icons/icon-mongodb.jpg" alt="" />
-              <img src="./imgs/tech-icons/icon-express.jpg" alt="" />
+              <img src="./imgs/tech-icons/icon-javascript.jpg" alt="" />
+              <img src="./imgs/tech-icons/icon-react.jpg" alt="" />
               <img src="./imgs/tech-icons/icon-npm.jpg" alt="" />
+              <img src="./imgs/tech-icons/icon-webpack.jpg" alt="" />
+              <img src="./imgs/tech-icons/icon-express.jpg" alt="" />
+              <img src="./imgs/tech-icons/icon-mongodb.jpg" alt="" />
+              <img src="./imgs/tech-icons/icon-nodejs.jpg" alt="" />
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <section id="contact">
-      <div class="button__container">
-        <a href="./resume/noel-thomson-resume.pdf" download class="button"
-          >Download Resume</a
-        >
-        <a href="mailto:noel.thomson@gmail.com" class="button">Contact</a>
-      </div>
-    </section>
+      <section id="contact">
+        <div class="button__container">
+          <a href="./resume/noel-thomson-resume.pdf" download class="button"
+            >Download Resume</a
+          >
+          <a href="mailto:noel.thomson@gmail.com" class="button">Contact</a>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <div class="footer__container">
