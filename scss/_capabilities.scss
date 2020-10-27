@@ -1,5 +1,4 @@
 #capabilities {
-  padding-top: 80px;
   .capabilities__container {
     max-width: 1020px;
     margin: 0 auto;
@@ -51,7 +50,7 @@
       }
     }
     .info-icon:not(:last-child)::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 50%;
       transform: translateY(-50%);

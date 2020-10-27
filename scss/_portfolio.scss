@@ -1,10 +1,10 @@
 #portfolio {
+  padding: 0;
   padding-top: 80px;
   #portfolio__container {
     max-width: 1020px;
     margin-right: auto;
     margin-left: auto;
-
     h1 {
       font-weight: 500;
     }
@@ -14,7 +14,7 @@
     }
 
     #filter__buttons {
-      margin-top: 60px;
+      margin-top: 50px;
 
       li:not(:last-child) {
         margin-right: 20px;
@@ -33,7 +33,7 @@
 
       .button::after {
         position: absolute;
-        content: "";
+        content: '';
         top: 0;
         left: 0;
         width: 0;
@@ -104,7 +104,7 @@
           }
 
           .item__info__container {
-            font-family: "Montserrat", serif;
+            font-family: 'Montserrat', serif;
             background-color: white;
             height: 80px;
             padding: 20px 0;

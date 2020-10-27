@@ -16,6 +16,9 @@ html {
   html {
     scroll-behavior: auto; } }
 
+section {
+  padding-top: 80px; }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -33,14 +36,15 @@ body {
   text-align: center; }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 400; }
-  body h1 {
+  body #section-heading {
     font-weight: 300;
-    transform: scale(1);
-    transition: transform 0.3s ease; }
-    body h1:hover {
-      transform: scale(1.1); }
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto; }
   body .text__underline {
     position: relative;
     background: inherit;
@@ -246,28 +250,6 @@ span:nth-child(3) {
   .top-nav__cta {
     font-size: 0.9rem; } }
 
-#hero {
-  margin-top: 88px;
-  background: #15191B;
-  background-image: url("https://i.imgur.com/Y5d47bB.jpg");
-  z-index: -1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 300px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-  #hero h1, #hero h2 {
-    font-weight: 700;
-    font-size: 50px;
-    font-family: 'roboto', sans-serif;
-    color: white; }
-  #hero h2 {
-    font-size: 40px; }
-
 #about {
   padding-top: 80px;
   position: relative;
@@ -323,6 +305,7 @@ span:nth-child(3) {
         margin-left: 20px; } }
 
 #portfolio {
+  padding: 0;
   padding-top: 80px; }
   #portfolio #portfolio__container {
     max-width: 1020px;
@@ -333,7 +316,7 @@ span:nth-child(3) {
     #portfolio #portfolio__container li {
       display: inline-block; }
     #portfolio #portfolio__container #filter__buttons {
-      margin-top: 60px; }
+      margin-top: 50px; }
       #portfolio #portfolio__container #filter__buttons li:not(:last-child) {
         margin-right: 20px; }
       #portfolio #portfolio__container #filter__buttons .button {
@@ -347,7 +330,7 @@ span:nth-child(3) {
         box-shadow: 4px 4px 4px #bdbdbd; }
       #portfolio #portfolio__container #filter__buttons .button::after {
         position: absolute;
-        content: "";
+        content: '';
         top: 0;
         left: 0;
         width: 0;
@@ -396,7 +379,7 @@ span:nth-child(3) {
           opacity: 1;
           transition: opacity, 0.25s; }
         #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container {
-          font-family: "Montserrat", serif;
+          font-family: 'Montserrat', serif;
           background-color: white;
           height: 80px;
           padding: 20px 0; }
@@ -463,96 +446,94 @@ span:nth-child(3) {
           margin-right: auto;
           margin-left: auto; } }
 
-#capabilities {
-  padding-top: 80px; }
-  #capabilities .capabilities__container {
-    max-width: 1020px;
-    margin: 0 auto; }
-    #capabilities .capabilities__container h1 {
-      font-weight: 500; }
-    #capabilities .capabilities__container .capabilities__desc {
-      margin: 40px auto 0;
-      font-weight: 500;
-      max-width: 600px;
-      font-size: 20px;
-      line-height: 2;
-      font-size: 20px; }
-      #capabilities .capabilities__container .capabilities__desc .text__underline {
-        position: relative;
-        background: inherit;
-        font-weight: 600;
-        white-space: nowrap; }
-        #capabilities .capabilities__container .capabilities__desc .text__underline .underline {
-          background: #d3deee;
-          position: absolute;
-          top: 12px;
-          right: 2px;
-          z-index: -1;
-          height: 0.55em; }
-    #capabilities .capabilities__container #info-icons {
-      margin-top: 40px; }
-      #capabilities .capabilities__container #info-icons .info-icon {
-        position: relative;
-        width: 100px;
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 0px 0px 7px 7px;
-        display: inline-block;
-        margin: 10px 17px;
-        box-shadow: 5px 5px 5px #bdbdbd; }
-        #capabilities .capabilities__container #info-icons .info-icon img {
-          height: 40px; }
-        #capabilities .capabilities__container #info-icons .info-icon p {
-          margin-top: 9px;
-          margin-bottom: 0;
-          font-size: 12px; }
-    #capabilities .capabilities__container .info-icon:not(:last-child)::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 100%;
-      width: 40px;
-      height: 0;
-      border-bottom: 1px dashed black; }
+#capabilities .capabilities__container {
+  max-width: 1020px;
+  margin: 0 auto; }
+  #capabilities .capabilities__container h1 {
+    font-weight: 500; }
+  #capabilities .capabilities__container .capabilities__desc {
+    margin: 40px auto 0;
+    font-weight: 500;
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 2;
+    font-size: 20px; }
+    #capabilities .capabilities__container .capabilities__desc .text__underline {
+      position: relative;
+      background: inherit;
+      font-weight: 600;
+      white-space: nowrap; }
+      #capabilities .capabilities__container .capabilities__desc .text__underline .underline {
+        background: #d3deee;
+        position: absolute;
+        top: 12px;
+        right: 2px;
+        z-index: -1;
+        height: 0.55em; }
+  #capabilities .capabilities__container #info-icons {
+    margin-top: 40px; }
+    #capabilities .capabilities__container #info-icons .info-icon {
+      position: relative;
+      width: 100px;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 0px 0px 7px 7px;
+      display: inline-block;
+      margin: 10px 17px;
+      box-shadow: 5px 5px 5px #bdbdbd; }
+      #capabilities .capabilities__container #info-icons .info-icon img {
+        height: 40px; }
+      #capabilities .capabilities__container #info-icons .info-icon p {
+        margin-top: 9px;
+        margin-bottom: 0;
+        font-size: 12px; }
+  #capabilities .capabilities__container .info-icon:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    width: 40px;
+    height: 0;
+    border-bottom: 1px dashed black; }
+  #capabilities .capabilities__container #tech-icons .tech-icons__container {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px; }
+    #capabilities .capabilities__container #tech-icons .tech-icons__container img {
+      height: 60px;
+      margin: 20px 40px; }
+  @media (max-width: 750px) {
+    #capabilities .capabilities__container #info-icons .info-icon {
+      width: 80px;
+      padding: 5px;
+      margin: 10px 5px; }
+      #capabilities .capabilities__container #info-icons .info-icon img {
+        height: 30px; }
+      #capabilities .capabilities__container #info-icons .info-icon p {
+        margin-top: 9px;
+        margin-bottom: 0;
+        font-size: 10px; }
+    #capabilities .capabilities__container #info-icons .info-icon:not(:last-child)::after {
+      width: 15px; }
     #capabilities .capabilities__container #tech-icons .tech-icons__container {
-      max-width: 800px;
+      max-width: 380px;
       margin-right: auto;
       margin-left: auto;
       margin-top: 40px; }
       #capabilities .capabilities__container #tech-icons .tech-icons__container img {
-        height: 60px;
-        margin: 20px 40px; }
-    @media (max-width: 750px) {
-      #capabilities .capabilities__container #info-icons .info-icon {
-        width: 80px;
-        padding: 5px;
-        margin: 10px 5px; }
-        #capabilities .capabilities__container #info-icons .info-icon img {
-          height: 30px; }
-        #capabilities .capabilities__container #info-icons .info-icon p {
-          margin-top: 9px;
-          margin-bottom: 0;
-          font-size: 10px; }
-      #capabilities .capabilities__container #info-icons .info-icon:not(:last-child)::after {
-        width: 15px; }
-      #capabilities .capabilities__container #tech-icons .tech-icons__container {
-        max-width: 380px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 40px; }
-        #capabilities .capabilities__container #tech-icons .tech-icons__container img {
-          height: 40px;
-          margin: 15px 10px; } }
-    @media (max-width: 405px) {
-      #capabilities .capabilities__container #info-icons .info-icon:nth-of-type(3) {
-        display: none; }
-      #capabilities .capabilities__container #info-icons .info-icon:not(:last-child)::after {
-        width: 15px; } }
-    @media (max-width: 350px) {
-      #capabilities .capabilities__container .tech-icons__container img {
         height: 40px;
-        margin: 15px 5px !important; } }
+        margin: 15px 10px; } }
+  @media (max-width: 405px) {
+    #capabilities .capabilities__container #info-icons .info-icon:nth-of-type(3) {
+      display: none; }
+    #capabilities .capabilities__container #info-icons .info-icon:not(:last-child)::after {
+      width: 15px; } }
+  @media (max-width: 350px) {
+    #capabilities .capabilities__container .tech-icons__container img {
+      height: 40px;
+      margin: 15px 5px !important; } }
 
 #contact .button__container {
   display: flex;

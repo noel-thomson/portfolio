@@ -27,6 +27,8 @@
     />
     <!--  AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- particles CSS -->
+    <link rel="stylesheet" media="screen" href="./particle/particles-style.css">
     <!--  CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
     <!--  jQuery -->
@@ -91,21 +93,28 @@
       </div>
     </header>
 
-    <section id="hero">
+    <div id="particles-js">
+      <div id="banner-text">
+        <h1>Noel Thomson</h1>
+        <h1>Web Developer</h1>
+      </div>
+    </div>
+
+    <!-- <section id="hero">
       <h1>Noel Thomson</h1>
       <h2>Web Developer</h2>
-    </section>
+    </section> -->
 
     <main id="mainContent">
       <section
         class="container-fluid"
         id="about"
-        data-aos="fade-up"
+        data-aos="fade-right"
         data-aos-duration="800"
         data-aos-easing="ease"
         data-aos-once="true"
       >
-        <h1>
+        <h1 id="section-heading">
           <span class="text__underline">
             About
             <span class="underline"></span>
@@ -116,7 +125,7 @@
             <img src="./imgs/headshot/noel.jpg" alt="" />
           </div>
           <div class="about__text__container">
-            <p>
+            <p class="desc">
               Thank you for visiting my portfolio website - I'm a web developer
               with a passion for front-end solutions and two years of experience
               creating web applications and user interfaces.
@@ -127,7 +136,7 @@
 
       <section class="container-fluid" id="portfolio">
         <div id="portfolio__container">
-          <h1>
+          <h1 id="section-heading">
             <span class="text__underline">
               Portfolio
               <span class="underline"></span>
@@ -140,12 +149,12 @@
             </li>
             <li>
               <a href="#" data-filter=".apps" class="filter button"
-                >Applications</a
+                >API Projects</a
               >
             </li>
             <li>
               <a href="#" data-filter=".react" class="filter button"
-                >React Apps</a
+                >React</a
               >
             </li>
             <li>
@@ -155,7 +164,7 @@
             </li>
             <li>
               <a href="#" data-filter=".emails" class="filter button"
-                >HTML Email</a
+                >Email</a
               >
             </li>
           </ul>
@@ -361,20 +370,15 @@
       <section class="container-fluid" id="capabilities">
         <div
           class="capabilities__container"
-          data-aos="fade-right"
-          data-aos-duration="800"
-          data-aos-delay="0"
-          data-aos-easing="ease-in-out"
-          data-aos-once="true"
         >
-          <h1>
+          <h1 id="section-heading">
             <span class="text__underline">
               Capabilities
               <span class="underline"></span>
             </span>
           </h1>
 
-          <p class="capabilities__desc">
+          <p class="desc capabilities__desc">
             I have a strong working knowledge of core web languages and
             principles and experience working with a number of modern
             frameworks. Self-motivated and hard working, I'm seeking an
@@ -443,6 +447,31 @@
         </p>
       </div>
     </footer>
+    
+    <!-- particle scripts -->
+    <script src="./js/particles.js"></script>
+    <script src="./js/particles-app.js"></script>
+    
+    <!-- particle js -->
+    <script>
+      var count_particles, stats, update;
+      stats = new Stats;
+      stats.setMode(0);
+      stats.domElement.style.position = 'absolute';
+      stats.domElement.style.left = '0px';
+      stats.domElement.style.top = '0px';
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector('.js-count-particles');
+      update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    </script>
 
     <!-- images ready -->
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
