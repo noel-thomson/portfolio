@@ -40,11 +40,15 @@ body {
   font-weight: 400; }
   body #section-heading {
     font-weight: 300;
+    transform: translate(0, 0);
+    transition: transform 0.3s ease-in-out;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     margin-left: auto;
     margin-right: auto; }
+  body section:hover #section-heading {
+    transform: translate(0px, -5px); }
   body .text__underline {
     position: relative;
     background: inherit;

@@ -59,17 +59,17 @@ body {
   font-weight: 400;
   #section-heading {
     font-weight: 300;
-    // transform: scale(1);
-    // transition: transform 0.3s ease-in-out;
+    transform: translate(0, 0);
+    transition: transform 0.3s ease-in-out;
     width: max-content;
     margin-left: auto;
     margin-right: auto;
   }
-  // section {
-  //   &:hover #section-heading {
-  //     transform: scale(1.1);
-  //   }
-  // }
+  section {
+    &:hover #section-heading {
+      transform: translate(0px, -5px);
+    }
+  }
 
   .text__underline {
     position: relative;
