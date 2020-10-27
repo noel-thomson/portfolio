@@ -40,15 +40,15 @@ body {
   font-weight: 400; }
   body #section-heading {
     font-weight: 300;
-    transform: translate(0, 0);
-    transition: transform 0.3s ease-in-out;
+    transform: translate(0, 0) scale(1);
+    transition: transform 0.5s ease;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
     margin-left: auto;
     margin-right: auto; }
   body section:hover #section-heading {
-    transform: translate(0px, -5px); }
+    transform: translate(0px, -5px) scale(1.05); }
   body .text__underline {
     position: relative;
     background: inherit;
@@ -539,28 +539,29 @@ span:nth-child(3) {
       height: 40px;
       margin: 15px 5px !important; } }
 
-#contact .button__container {
-  display: flex;
-  justify-content: center;
-  max-width: 400px;
-  margin: 40px auto 0; }
-  #contact .button__container .button {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    letter-spacing: 0.0625rem;
-    font-weight: 600;
-    min-width: 200px;
-    margin: 0px 20px;
-    white-space: nowrap;
-    padding: 14px 16px;
-    border-radius: 2px; }
-
-@media (max-width: 500px) {
+#contact {
+  padding-top: 40px; }
   #contact .button__container {
-    flex-direction: column; }
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    margin: 40px auto 0; }
     #contact .button__container .button {
-      max-width: 200px;
-      margin: 10px auto; } }
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+      letter-spacing: 0.0625rem;
+      font-weight: 600;
+      min-width: 200px;
+      margin: 0px 20px;
+      white-space: nowrap;
+      padding: 14px 16px;
+      border-radius: 2px; }
+  @media (max-width: 500px) {
+    #contact .button__container {
+      flex-direction: column; }
+      #contact .button__container .button {
+        max-width: 200px;
+        margin: 10px auto; } }
 
 footer {
   height: 100px;
