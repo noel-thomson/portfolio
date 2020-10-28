@@ -2,154 +2,6 @@
    HTML5 CSS Reset Minified - Eric Meyer
    ========================================================================== */
 
-/* html,
-body,
-div,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-span,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-body {
-  line-height: 1;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-nav ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: none;
-}
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  text-decoration: none;
-}
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-del {
-  text-decoration: line-through;
-}
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-input,
-select {
-  vertical-align: middle;
-}
-li {
-  list-style: none;
-} */
-
 /* =============================================================================
    My CSS
    ========================================================================== */
@@ -222,13 +74,147 @@ canvas {
   font-size: 50px;
   font-family: 'roboto', sans-serif;
   color: white;
+  -webkit-animation: leftIn 0.75s ease-out;
+  animation: leftIn 0.75s ease-out;
+  letter-spacing: 8px;
 }
-#banner-text h1:nth-of-type(2) {
-  font-size: 40px;
+@-webkit-keyframes leftIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-5rem);
+    transform: translateX(-5rem);
+  }
+  80% {
+    -webkit-transform: translateX(0.5rem);
+    transform: translateX(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+  }
+}
+@keyframes leftIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-5rem);
+    transform: translateX(-5rem);
+  }
+  80% {
+    -webkit-transform: translateX(0.5rem);
+    transform: translateX(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+  }
+}
+#banner-text p {
+  font-size: 30px;
+  letter-spacing: 4px;
+  -webkit-animation: rightIn 0.75s ease-out;
+  animation: rightIn 0.75s ease-out;
+}
+@-webkit-keyframes rightIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(5rem);
+    transform: translateX(5rem);
+  }
+  80% {
+    -webkit-transform: translateX(-0.5rem);
+    transform: translateX(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+  }
+}
+@keyframes rightIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(5rem);
+    transform: translateX(5rem);
+  }
+  80% {
+    -webkit-transform: translateX(-0.5rem);
+    transform: translateX(-0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+    transform: translateX(0rem);
+  }
 }
 #banner-text h1,
-h2:hover {
+p:hover {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
+}
+
+#banner-text a {
+  background-color: white;
+  color: black;
+  border: 2px solid white;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-size: 26px;
+  letter-spacing: 2px;
+  /* text-transorm: uppercase; */
+}
+@-webkit-keyframes downIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+    transform: translateY(-5rem);
+  }
+  80% {
+    -webkit-transform: translateY(0.5rem);
+    transform: translateY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+    transform: translateY(0rem);
+  }
+}
+@keyframes downIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-5rem);
+    transform: translateY(-5rem);
+  }
+  80% {
+    -webkit-transform: translateY(0.5rem);
+    transform: translateY(0.5rem);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0rem);
+    transform: translateY(0rem);
+  }
+}
+#cta-portfolio {
+  -webkit-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
+  -webkit-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  -webkit-animation: downIn 0.75s ease-out 0.5s;
+  animation: downIn 0.75s ease-out 0.5s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+}
+#cta-portfolio:hover {
+  -webkit-transform: translateY(-4px) scale(1.05);
+  -ms-transform: translateY(-4px) scale(1.05);
+  transform: translateY(-4px) scale(1.05);
 }
