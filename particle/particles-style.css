@@ -29,7 +29,6 @@ canvas {
 } */
 
 /* ---- particles.js container ---- */
-
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
@@ -122,6 +121,7 @@ canvas {
   letter-spacing: 4px;
   -webkit-animation: rightIn 0.75s ease-out;
   animation: rightIn 0.75s ease-out;
+  font-weight: bold;
 }
 @-webkit-keyframes rightIn {
   0% {
@@ -170,6 +170,7 @@ p:hover {
   border-radius: 50px;
   font-size: 26px;
   letter-spacing: 2px;
+  font-weight: 500;
   /* text-transorm: uppercase; */
 }
 @-webkit-keyframes downIn {
@@ -224,4 +225,20 @@ p:hover {
   -webkit-transform: translateY(-4px) scale(1.05);
   -ms-transform: translateY(-4px) scale(1.05);
   transform: translateY(-4px) scale(1.05);
+}
+
+.slant {
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 100%);
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+  background-color: white;
+  height: 5vh;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.slant:nth-of-type(2) {
+  -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  left: 50%;
 }

@@ -96,11 +96,13 @@
     <div id="particles-js">
       <div id="banner-text">
         <h1>Noel Thomson</h1>
-        <p>Front End Developer</p>
+        <p>Front End Engineer</p>
         <div id="cta-portfolio">
           <a href="#portfolio">View Projects</a>
         </div>
       </div>
+      <div class="slant"></div>
+      <div class="slant"></div>
     </div>
 
     <!-- <section id="hero">
@@ -109,35 +111,48 @@
     </section> -->
 
     <main id="mainContent">
-      <section
-        class="container-fluid"
-        id="about"
-      >
-        <h1 id="section-heading">
-          <span class="text__underline">
-            About
-            <span class="underline"></span>
-          </span>
-        </h1>
-        <div class="about__container">
-          <div class="about__image__container">
-            <img src="./imgs/headshot/noel.jpg" alt="" />
-          </div>
-          <div class="about__text__container">
-            <p class="desc">
-              Thank you for visiting my portfolio website - I'm a web developer
-              with a passion for front-end solutions and two years of experience
-              creating web applications and user interfaces.
-            </p>
+      <section id="about">
+        <div class="container-fluid">
+          <h1 id="section-heading">
+            <span class="text__underline">
+              About Me
+              <span class="underline"></span>
+            </span>
+          </h1>
+          <div class="about__container">
+            <div class="about__image__container">
+              <img src="./imgs/headshot/noel.jpg" alt="" />
+            </div>
+            <div class="about__text__container">
+              <p class="desc">
+                A tenacious self-taught developer, I use constant iteration
+                to develop and improve products. Front-end focused with full-stack 
+                experience, I'm an agile collaborator who is 
+                highly motivated to produce results. <br> 
+                Below are recent projects that showcase my skill set.
+              </p>
+              <!-- <p class="desc">
+                Thank you for visiting my portfolio website - I'm a web developer
+                with a passion for front-end solutions and two years of experience
+                creating web applications and user interfaces.
+              </p> -->
+            </div>
           </div>
         </div>
+        <div class="slant"></div>
+        <div class="slant"></div>
+        <a href="#about">
+          <div class="arrow-container">
+            <img src="./imgs/arrow/arrow1.png" alt="">
+          </div>
+        </a>
       </section>
-
+      
       <section class="container-fluid" id="portfolio">
         <div id="portfolio__container">
           <h1 id="section-heading">
             <span class="text__underline">
-              Portfolio
+              My Portfolio
               <span class="underline"></span>
             </span>
           </h1>
@@ -147,29 +162,19 @@
               <a href="#" data-filter="*" class="current filter button">All</a>
             </li>
             <li>
-              <a href="#" data-filter=".api" class="filter button">
-                API
-              </a>
+              <a href="#" data-filter=".js" class="filter button">Javascript</a>
             </li>
             <li>
-              <a href="#" data-filter=".react" class="filter button"
-                >React</a
-              >
+              <a href="#" data-filter=".react" class="filter button">React</a>
             </li>
             <li>
-              <a href="#" data-filter=".js" class="filter button"
-                >JS</a
-              >
+              <a href="#" data-filter=".fullstack" class="filter button">Fullstack</a>
             </li>
             <li>
-              <a href="#" data-filter=".pages" class="filter button"
-                >Pages</a
-              >
+              <a href="#" data-filter=".api" class="filter button">API</a>
             </li>
             <li>
-              <a href="#" data-filter=".email" class="filter button"
-                >Email</a
-              >
+              <a href="#" data-filter=".pages" class="filter button">Pages</a>
             </li>
           </ul>
 
@@ -208,6 +213,25 @@
                       <p class="item__title">Stock Photography Generator</p>
                       <p class="item__description">API Application</p>
                       <a href="https://noel-thomson.github.io/stock-photography-generator/" target="blank">
+                        View Project
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item fullstack">
+                <div class="card-wrapper">
+                  <div class="card-container">
+                    <div class="card-face card-face-front">
+                      <div class="card-img-container">
+                        <img class="card-img" src="./imgs/mockups/store.jpg" alt="">
+                      </div>
+                    </div>
+                    <div class="card-face card-face-back">
+                      <img src="./imgs/card-icons/shop.png" alt="">
+                      <p class="item__title">E-Commerce Store</p>
+                      <p class="item__description">Full Stack Application</p>
+                      <a href="https://mern-pro-shop.herokuapp.com/" target="blank">
                         View Project
                       </a>
                     </div>
@@ -311,7 +335,7 @@
                     </div>
                   </div>
               </li>
-              <li class="item email">
+              <li class="item pages">
                   <div class="card-wrapper">
                     <div class="card-container">
                       <div class="card-face card-face-front">
@@ -357,6 +381,18 @@
             </ul>
           </div>
         </div>
+        <div class="slant"></div>
+        <div class="slant"></div>
+        <a href="#portfolio">
+          <div class="arrow-container top-arrow">
+            <img src="./imgs/arrow/arrow1.png" alt="">
+          </div>
+        </a>
+        <a href="#capabilities">
+          <div class="arrow-container bottom-arrow">
+            <img src="./imgs/arrow/arrow1.png" alt="">
+          </div>
+        </a>
       </section>
 
       <section class="container-fluid" id="capabilities">
@@ -365,20 +401,27 @@
         >
           <h1 id="section-heading">
             <span class="text__underline">
-              Capabilities
+              My Capabilities
               <span class="underline"></span>
             </span>
           </h1>
-
+          
           <p class="desc capabilities__desc">
+            I'm highly conversant with modern languages and frameworks including React, 
+            ES6 JavaScript, Sass/CSS3, HTML5, Express, MongoDB and NodeJS. <br>
+            I am always looking for opportunities to use my skill set to develop 
+            high quality products that help businesses succeed and enrich users.
+          </p>
+          
+          <!-- <p class="desc capabilities__desc">
             I have a strong working knowledge of core web languages and
             principles and experience working with a number of modern
             frameworks. Self-motivated and hard working, I'm seeking an
             opportunity to work in a challenging environment to take my career
             as a developer to the next level.
-          </p>
+          </p> -->
 
-          <div id="info-icons">
+          <!-- <div id="info-icons">
             <div class="info-icons__container">
               <div class="info-icon">
                 <img src="./imgs/info-icons/prototype.png" alt="" />
@@ -397,15 +440,15 @@
                 <p>Deploy</p>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div id="tech-icons">
             <div class="tech-icons__container">
               <img src="./imgs/tech-icons/icon-html5.jpg" alt="" />
-              <img src="./imgs/tech-icons/icon-css3.jpg" alt="" />
               <img src="./imgs/tech-icons/icon-sass.jpg" alt="" />
-              <img src="./imgs/tech-icons/icon-javascript.jpg" alt="" />
               <img src="./imgs/tech-icons/icon-react.jpg" alt="" />
+              <img src="./imgs/tech-icons/icon-javascript.jpg" alt="" />
+              <img src="./imgs/tech-icons/icon-css3.jpg" alt="" />
               <img src="./imgs/tech-icons/icon-npm.jpg" alt="" />
               <img src="./imgs/tech-icons/icon-webpack.jpg" alt="" />
               <img src="./imgs/tech-icons/icon-express.jpg" alt="" />

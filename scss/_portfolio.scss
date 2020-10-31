@@ -1,6 +1,13 @@
 #portfolio {
-  padding: 0;
-  padding-top: 80px;
+  background: #fbfbfb;
+  position: relative;
+  padding-bottom: 80px;
+  .top-arrow {
+    top: -30px;
+  }
+  .bottom-arrow {
+    bottom: -20px;
+  }
   #portfolio__container {
     max-width: 1020px;
     margin-right: auto;
@@ -15,21 +22,27 @@
 
     #filter__buttons {
       margin-top: 50px;
-
-      li:not(:last-child) {
-        margin-right: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-left: auto;
+      margin-right: auto;
+      li {
+        display: flex;
+        margin: 5px 5px;
       }
 
       .button {
         background-color: white;
         border: 1px solid $black;
         color: $black;
-        background: none;
+        // background: none;
         font-weight: bold;
         position: relative;
-        transition: color 0.25s ease;
-        border-radius: 3px;
-        box-shadow: 0 2px 7px 2px #bdbdbd;
+        transition: color 0.35s ease;
+        border-radius: 2px;
+        box-shadow: 0 2px 5px 2px #bdbdbd;
+        z-index: 2;
       }
 
       .button::after {
@@ -40,7 +53,7 @@
         width: 0;
         height: 100%;
         background-color: $black;
-        transition: width 0.3s ease-in-out;
+        transition: width 0.425s ease-in-out;
         z-index: -1;
       }
 
@@ -81,7 +94,7 @@
               position: relative;
               width: 100%;
               height: 100%;
-              transition: transform 0.7s;
+              transition: transform 1s;
               transform-style: preserve-3d;
               .card-face {
                 position: absolute;
@@ -264,17 +277,24 @@
       }
     }
   }
-  @media (max-width: 560px) {
+  @media (max-width: 510px) {
     #filter__buttons {
-      max-width: 250px;
-      margin-right: auto;
-      margin-left: auto;
-      li:nth-of-type(-n + 3) {
-        margin-bottom: 30px;
-      }
-      li:nth-of-type(3) {
-        margin-right: 0px !important;
-      }
+      max-width: 300px;
     }
+  }
+  .slant {
+    clip-path: polygon(0 100%, 0 0, 100% 100%);
+    background-color: white;
+    // height: 80px;
+    height: 5vh;
+    // width: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+  }
+  .slant:nth-of-type(2) {
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    left: 50%;
   }
 }
