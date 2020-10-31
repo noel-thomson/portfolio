@@ -106,9 +106,13 @@ body {
   width: -moz-max-content;
   width: max-content;
   -webkit-animation: bounce 2s infinite ease-in-out 1.2s;
-          animation: bounce 2s infinite ease-in-out 1.2s; }
+          animation: bounce 2s infinite ease-in-out 1.2s;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center; }
   .arrow-container img {
-    width: 30px;
+    width: 100%;
     transform: translate(0, 3px); }
 
 @-webkit-keyframes bounce {
