@@ -153,10 +153,6 @@ body {
   justify-content: space-between;
   align-items: center; }
 
-.logo__container {
-  width: 188px;
-  height: 30px; }
-
 .top-nav__mobile-toggle {
   position: relative;
   display: none;
@@ -701,6 +697,7 @@ footer {
       margin-right: 20px; }
     footer .footer__container p {
       font-size: 14px;
+      font-weight: 500;
       margin: 0;
       color: white;
       position: relative;

@@ -60,7 +60,7 @@ canvas {
 
 @media screen and (max-width: 1000px) {
   #particles-js {
-    height: 55%;
+    height: 60%;
   }
 }
 
@@ -222,9 +222,9 @@ p:hover {
   margin: 0 auto;
 }
 #cta-portfolio:hover {
-  -webkit-transform: translateY(-4px) scale(1.05);
-  -ms-transform: translateY(-4px) scale(1.05);
-  transform: translateY(-4px) scale(1.05);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .slant {
@@ -234,7 +234,7 @@ p:hover {
   height: 5vh;
   width: 50%;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
 }
 .slant:nth-of-type(2) {
