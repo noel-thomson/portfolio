@@ -1,59 +1,26 @@
 /* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
+   HTML5 CSS Reset Minified - Eric Meyer (not included)
    ========================================================================== */
-
-/* =============================================================================
-   My CSS
-   ========================================================================== */
-
-/* ---- base ---- */
-
-/* html,
-body {
-  width: 100%;
-  height: 100%;
-  background: #111;
-}
-
-html {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-body {
-  font: normal 75% Arial, Helvetica, sans-serif;
-}
-
-canvas {
-  display: block;
-  vertical-align: bottom;
-} */
-
-/* ---- particles.js container ---- */
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
 
 #particles-js {
   margin-top: 88px;
   width: 100%;
-  height: 47.25%;
-  /* background: -o-linear-gradient(
-    55deg,
-    rgba(9, 45, 73, 0.975) 0%,
-    rgba(2, 29, 68, 0.9) 50%,
-    rgba(9, 35, 73, 0.975) 100%
-  );
-  background: linear-gradient(
-    35deg,
-    rgba(9, 45, 73, 0.975) 0%,
-    rgba(2, 29, 68, 0.9) 50%,
-    rgba(9, 35, 73, 0.975) 100%
-  ); */
   background: -o-linear-gradient(
     90deg,
+    rgba(21, 25, 27, 1) 0%,
+    rgba(21, 25, 27, 0.9) 50%,
+    rgba(21, 25, 27, 1) 100%
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(21, 25, 27, 1)),
+    color-stop(50%, rgba(21, 25, 27, 0.9)),
+    to(rgba(21, 25, 27, 1))
+  );
+  background: -o-linear-gradient(
+    left,
     rgba(21, 25, 27, 1) 0%,
     rgba(21, 25, 27, 0.9) 50%,
     rgba(21, 25, 27, 1) 100%
@@ -68,12 +35,6 @@ canvas {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   position: relative;
-}
-
-@media screen and (max-width: 1000px) {
-  #particles-js {
-    height: 65%;
-  }
 }
 
 #banner-text {
@@ -131,6 +92,7 @@ canvas {
 #banner-text p {
   font-size: 30px;
   letter-spacing: 4px;
+  margin-bottom: 8px;
   -webkit-animation: rightIn 0.75s ease-out;
   animation: rightIn 0.75s ease-out;
   font-weight: bold;
@@ -253,4 +215,39 @@ p:hover {
   -webkit-clip-path: polygon(0 100%, 100% 0, 100% 100%);
   clip-path: polygon(0 100%, 100% 0, 100% 100%);
   left: 50%;
+}
+
+@media (min-width: 768px), (min-height: 768px) {
+  #particles-js {
+    height: 82%;
+  }
+}
+@media (min-height: 451px) and (max-height: 767px) {
+  #particles-js {
+    height: 80%;
+  }
+  #banner-text h1 {
+    font-size: 35px;
+  }
+  #banner-text p {
+    font-size: 22px;
+  }
+  #banner-text a {
+    font-size: 22px;
+  }
+}
+@media (max-height: 450px) {
+  #particles-js {
+    height: 65%;
+  }
+  #banner-text h1 {
+    font-size: 28px;
+  }
+  #banner-text p {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  #banner-text a {
+    font-size: 18px;
+  }
 }

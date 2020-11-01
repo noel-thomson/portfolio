@@ -67,11 +67,15 @@ body {
     z-index: 2;
     .underline {
       background: #d3deee;
+      background: rgba(44, 122, 255, 0.225);
       opacity: 0.7;
       position: absolute;
       top: 0.8em;
       z-index: -1;
       height: 0.3em;
+      left: 50%;
+      width: 105%;
+      transform: translate(-50%, 0);
     }
   }
 }
