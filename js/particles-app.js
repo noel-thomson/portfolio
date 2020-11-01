@@ -17,7 +17,7 @@ particlesJS(
   {
     particles: {
       number: {
-        value: 45,
+        value: 55,
         density: {
           enable: true,
           value_area: 800,
@@ -52,7 +52,7 @@ particlesJS(
         },
       },
       size: {
-        value: 5,
+        value: 3,
         random: true,
         anim: {
           enable: false,
@@ -65,7 +65,7 @@ particlesJS(
         enable: true,
         distance: 150,
         color: '#ffffff',
-        opacity: 0.5,
+        opacity: 0.4,
         width: 1,
       },
       move: {
@@ -121,13 +121,5 @@ particlesJS(
       },
     },
     retina_detect: true,
-    config_demo: {
-      hide_card: false,
-      background_color: '#b61924',
-      background_image: '',
-      background_position: '50% 50%',
-      background_repeat: 'no-repeat',
-      background_size: 'cover',
-    },
   }
 );
