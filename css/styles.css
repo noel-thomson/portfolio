@@ -679,6 +679,10 @@ span:nth-child(3) {
       height: 40px;
       margin: 15px 5px !important; } }
 
+@media (max-width: 730px) {
+  .capabilities__desc br {
+    display: none; } }
+
 #contact {
   padding-top: 0px; }
   #contact .button__container {

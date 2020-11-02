@@ -126,3 +126,11 @@
     }
   }
 }
+
+@media (max-width: 730px) {
+  .capabilities__desc {
+    br {
+      display: none;
+    }
+  }
+}
