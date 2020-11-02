@@ -137,12 +137,15 @@
             img {
               margin-bottom: 20px;
             }
+            p {
+              margin-bottom: 20px;
+            }
             p:nth-of-type(1) {
               font-weight: bold;
               font-size: 1.3rem;
             }
-            p:nth-of-type(2) {
-              margin-bottom: 20px;
+            p:nth-of-type(3) {
+              font-weight: 600;
             }
             a {
               padding: 7px 10px;
@@ -160,60 +163,6 @@
 
           h1 {
             text-align: center;
-          }
-          // end of flip card
-
-          .item__wrapper {
-            background-color: rgba(51, 71, 93, 0.6);
-            overflow: hidden;
-            position: relative;
-
-            .item__image {
-              width: 300px;
-              height: 177.91px;
-            }
-
-            .item__icon {
-              height: 60px;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              opacity: 0;
-            }
-          }
-          .item__wrapper:hover {
-            .item__image {
-              opacity: 0.4;
-              transform: scale(1.09);
-              scale: 1.05;
-              transition: opacity 0s, transform 0.25s linear;
-            }
-            .item__icon {
-              opacity: 1;
-              transition: opacity, 0.25s;
-            }
-          }
-
-          .item__info__container {
-            font-family: 'Montserrat', serif;
-            background-color: white;
-            height: 80px;
-            padding: 20px 0;
-            p {
-              padding: 0;
-              margin: 0;
-            }
-            .item__title {
-              color: black;
-              font-size: 12px;
-              text-transform: uppercase;
-              letter-spacing: 0.5px;
-            }
-            .item__description {
-              font-size: 12px;
-              color: #7f8c8d;
-            }
           }
         }
       }
@@ -298,3 +247,56 @@
     left: 50%;
   }
 }
+
+// .item__wrapper {
+//   background-color: rgba(51, 71, 93, 0.6);
+//   overflow: hidden;
+//   position: relative;
+
+//   .item__image {
+//     width: 300px;
+//     height: 177.91px;
+//   }
+
+//   .item__icon {
+//     height: 60px;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     opacity: 0;
+//   }
+// }
+// .item__wrapper:hover {
+//   .item__image {
+//     opacity: 0.4;
+//     transform: scale(1.09);
+//     scale: 1.05;
+//     transition: opacity 0s, transform 0.25s linear;
+//   }
+//   .item__icon {
+//     opacity: 1;
+//     transition: opacity, 0.25s;
+//   }
+// }
+
+// .item__info__container {
+//   font-family: 'Montserrat', serif;
+//   background-color: white;
+//   height: 80px;
+//   padding: 20px 0;
+//   p {
+//     padding: 0;
+//     margin: 0;
+//   }
+//   .item__title {
+//     color: black;
+//     font-size: 12px;
+//     text-transform: uppercase;
+//     letter-spacing: 0.5px;
+//   }
+//   .item__description {
+//     font-size: 12px;
+//     color: #7f8c8d;
+//   }
+// }

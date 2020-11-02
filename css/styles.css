@@ -477,11 +477,13 @@ span:nth-child(3) {
           padding: 10px; }
           #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back img {
             margin-bottom: 20px; }
+          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back p {
+            margin-bottom: 20px; }
           #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back p:nth-of-type(1) {
             font-weight: bold;
             font-size: 1.3rem; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back p:nth-of-type(2) {
-            margin-bottom: 20px; }
+          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back p:nth-of-type(3) {
+            font-weight: 600; }
           #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back a {
             padding: 7px 10px;
             color: #2979ff;
@@ -494,44 +496,6 @@ span:nth-child(3) {
               border: 1px solid #2979ff; }
         #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item h1 {
           text-align: center; }
-        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper {
-          background-color: rgba(51, 71, 93, 0.6);
-          overflow: hidden;
-          position: relative; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper .item__image {
-            width: 300px;
-            height: 177.91px; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper .item__icon {
-            height: 60px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 0; }
-        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__image {
-          opacity: 0.4;
-          transform: scale(1.09);
-          scale: 1.05;
-          transition: opacity 0s, transform 0.25s linear; }
-        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__wrapper:hover .item__icon {
-          opacity: 1;
-          transition: opacity, 0.25s; }
-        #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container {
-          font-family: 'Montserrat', serif;
-          background-color: white;
-          height: 80px;
-          padding: 20px 0; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container p {
-            padding: 0;
-            margin: 0; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__title {
-            color: black;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px; }
-          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .item__info__container .item__description {
-            font-size: 12px;
-            color: #7f8c8d; }
     @media (max-width: 1060px) {
       #portfolio #portfolio__container #portfolio__items__container {
         max-width: 680px; } }
