@@ -147,11 +147,16 @@
             p:nth-of-type(3) {
               font-weight: 600;
             }
+            .card-face-back-links {
+              display: flex;
+            }
             a {
+              margin: 0 5px;
               padding: 7px 10px;
               color: #2979ff;
               border: 1px solid #2979ff;
-              border-radius: 20px;
+              border-radius: 5px;
+              width: 120px;
               transition: all 0.5s ease;
               &:hover {
                 color: white;
@@ -160,7 +165,6 @@
               }
             }
           }
-
           h1 {
             text-align: center;
           }

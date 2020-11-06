@@ -5,8 +5,6 @@ const navLinks = document.querySelectorAll('.top-nav__link');
 
 let currentFilter = document.querySelector('.filter.current');
 
-// var lastScrollTop = 0;
-
 mobileToggle.addEventListener('click', function () {
   header.classList.toggle('open');
 });

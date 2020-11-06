@@ -484,11 +484,15 @@ span:nth-child(3) {
             font-size: 1.3rem; }
           #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back p:nth-of-type(3) {
             font-weight: 600; }
+          #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back .card-face-back-links {
+            display: flex; }
           #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back a {
+            margin: 0 5px;
             padding: 7px 10px;
             color: #2979ff;
             border: 1px solid #2979ff;
-            border-radius: 20px;
+            border-radius: 5px;
+            width: 120px;
             transition: all 0.5s ease; }
             #portfolio #portfolio__container #portfolio__items__container .portfolio__items .item .card-face-back a:hover {
               color: white;
