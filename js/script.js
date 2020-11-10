@@ -2,6 +2,11 @@ const mobileToggle = document.querySelector('.top-nav__mobile-toggle');
 const header = document.querySelector('header');
 const filters = document.querySelectorAll('.filter');
 const navLinks = document.querySelectorAll('.top-nav__link');
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 800,
+  speedAsDuration: true,
+  easing: 'easeInOutCubic',
+});
 
 let currentFilter = document.querySelector('.filter.current');
 
