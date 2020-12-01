@@ -1,17 +1,12 @@
 #capabilities {
+  padding-top: 80px;
+  padding-bottom: 0;
   .capabilities__container {
-    max-width: 1020px;
     margin: 0 auto;
-    h1 {
-      font-weight: 500;
-    }
     .capabilities__desc {
       margin: 40px auto 0;
-      font-weight: 500;
       max-width: 700px;
-      font-size: 20px;
       line-height: 2;
-      font-size: 20px;
       .text__underline {
         position: relative;
         background: inherit;

@@ -1,0 +1,211 @@
+#hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    // background: url('https://mixkit.imgix.net/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-0.jpg')
+    //   no-repeat center center/cover;
+    &:after {
+      content: '';
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.1);
+      position: absolute;
+    }
+    video {
+      min-width: 100%;
+      min-height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  }
+  .content-container {
+    z-index: 1;
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    h1,
+    h3,
+    .btn {
+      opacity: 0;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 100px;
+      margin-bottom: 15px;
+    }
+    h3 {
+      font-size: 36px;
+      line-height: 2;
+    }
+    .btn {
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      display: inline-block;
+      padding: 15px 30px;
+      background: #3a4052;
+      color: #fff;
+      border-radius: 30px;
+      border: solid rgba(255, 255, 255, 0.7) 2px;
+      margin-top: 30px;
+      text-transform: uppercase;
+      &:hover {
+        transition: all 0.7s ease;
+        animation-fill-mode: none;
+        opacity: 1;
+        background: rgba(255, 255, 255, 0.9);
+        color: black;
+      }
+    }
+  }
+}
+
+// clip paths
+#hero {
+  .slant {
+    clip-path: polygon(0 100%, 0 0, 105% 100%);
+    background-color: white;
+    position: absolute;
+    height: 5vh;
+    bottom: 0;
+    left: 0%;
+    width: 50%;
+    z-index: 1;
+  }
+  .slant-2 {
+    clip-path: polygon(-5% 100%, 100% 0, 100% 100%);
+    background-color: white;
+    position: absolute;
+    height: 5vh;
+    bottom: 0;
+    left: 50%;
+    width: 50%;
+    z-index: 1;
+  }
+  .arrow-container {
+    bottom: calc(0% - 15px);
+  }
+}
+
+// animations
+h1 {
+  animation: leftIn 0.75s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes leftIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+h3 {
+  animation: rightIn 0.75s ease 0.3s;
+  animation-fill-mode: forwards;
+}
+@keyframes rightIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.btn {
+  animation: upIn 0.75s ease 0.6s;
+  animation-fill-mode: forwards;
+}
+@keyframes upIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 0.85;
+    transform: translateY(0);
+  }
+}
+
+// media queries
+@media (max-width: 990px) {
+  #hero {
+    height: 80vh;
+    .content-container {
+      h1 {
+        font-size: 80px; //
+      }
+      h3 {
+        font-size: 30px; //
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  #hero {
+    .content-container {
+      h1 {
+        font-size: 60px; //
+      }
+      h3 {
+        font-size: 24px; //
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  #hero {
+    .content-container {
+      h1 {
+        font-size: 50px; //
+      }
+      h3 {
+        font-size: 18px; //
+      }
+      .btn {
+        font-size: 14px;
+        padding: 12px 20px; //
+      }
+    }
+  }
+}
+@media (max-height: 575px) {
+  #hero {
+    .content-container {
+      position: absolute;
+      top: 58%;
+      transform: translate(0, -50%);
+      h1 {
+        font-size: 50px; //
+      }
+      h3 {
+        font-size: 18px; //
+      }
+      .btn {
+        font-size: 14px;
+        padding: 12px 20px; //
+      }
+    }
+  }
+}

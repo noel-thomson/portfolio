@@ -1,35 +1,43 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
+const browserSync = require('browser-sync').create();
+const { series, parallel, src, dest, watch } = require('gulp');
+const concat = require('gulp-concat');
+const sass = require('gulp-sass');
+const uglify = require('gulp-uglify');
 
-// compile scss into css
-function style() {
-  // 1. locate scss file
-  return (
-    gulp
-      .src('./scss/**/*.scss')
-      // 2. convert to css file through sass compiler
-      .pipe(sass().on('error', sass.logError))
-      // 2.1 pass through autoprefixer
-      .pipe(autoprefixer())
-      // 3. location to save compiled css
-      .pipe(gulp.dest('./css'))
-      // 4. stream changes to browsers
-      .pipe(browserSync.stream())
-  );
+function js() {
+  return src('./src/js/**/*.js')
+    .pipe(
+      babel({
+        presets: ['@babel/env'],
+      })
+    )
+    .pipe(concat('main.js'))
+    .pipe(uglify())
+    .pipe(dest('./dist/js'));
 }
 
-function watch() {
+function style() {
+  return src('./src/scss/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(dest('./dist/css'))
+    .pipe(browserSync.stream());
+}
+
+function build() {
   browserSync.init({
     server: {
       baseDir: './',
     },
   });
-  gulp.watch('./scss/**/*.scss', style);
-  gulp.watch('./**/*html').on('change', browserSync.reload);
-  gulp.watch('./js/**/*.js').on('change', browserSync.reload);
+  watch('./src/scss/**/*.scss', style);
+  watch('./src/js/**/*.js', js);
+  watch('./**/*html').on('change', browserSync.reload);
+  watch('./src/js/**/*.js').on('change', browserSync.reload);
 }
 
+exports.watch = build;
+exports.js = js;
 exports.style = style;
-exports.watch = watch;

@@ -6,7 +6,7 @@ footer {
   align-items: center;
   margin-top: 40px;
   .footer__container {
-    width: 1000px;
+    text-align: center;
     i {
       color: white;
       font-size: 45px;
@@ -23,6 +23,8 @@ footer {
       top: 8px;
       a {
         color: white;
+        font-weight: 400;
+        font-size: 12px;
       }
     }
   }

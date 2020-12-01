@@ -5,116 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Noel Thomson - Portfolio</title>
-    <link rel="shortcut icon" href="./imgs/headshot/noel.jpg" />
+    <link rel="shortcut icon" href="./imgs/logo/logo.svg" />
     <!--  Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700|Roboto:900"
       rel="stylesheet"
     />
-    <!--  Icons -->
+    <!-- Footer Icons -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
-    <!--  Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
     <!--  AOS CSS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- particles CSS -->
-    <link rel="stylesheet" media="screen" href="./particle/particles-style.css">
     <!--  CSS -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./dist/css/styles.css" />
     <!--  jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
-    <!--  Bootstrap JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/smooth-scroll.polyfills.min.js"></script>
+    <!-- smooth scroll  -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
   </head>
   <body>
-    <header role="banner" class="header">
-      <div class="header__wrapper">
-        <div class="header__container">
-          <a href="https://noel-codes.com/" class="logo__wrapper">
-            <div class="logo__container">
-              <img width="38" height="38" src="./imgs/logo/logo.svg" alt="">
-            </div>
-          </a>
-          <nav class="top-nav">
-            <div class="top-nav__mobile-toggle">
-              <div class="top-nav__hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="top-nav__list__wrapper">
-              <div class="top-nav__list__container">
-                <ul class="top-nav__list">
-                  <li><a class="top-nav__link" href="#about">About</a></li>
-                  <li>
-                    <a class="top-nav__link" href="#portfolio">Portfolio</a>
-                  </li>
-                  <li>
-                    <a class="top-nav__link" href="#capabilities"
-                      >Capabilities</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="top-nav__cta button"
-                      href="mailto:noel.thomson@gmail.com"
-                      >Contact</a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </header>
 
-    <section id="particles-js">
-      <div id="banner-text">
-        <h1>Noel Thomson</h1>
-        <p>Front End Engineer</p>
-        <div id="cta-portfolio">
-          <a href="#portfolio">View Projects</a>
+    <nav id='navbar'>
+      <div class="navbar__wrapper">
+        <div class="navbar__container">
+          <a href="https://noel-codes.com" class="logo__container">
+            <svg viewBox="0 0 23.631 23.631" style="enable-background:new 0 0 23.631 23.631;" xml:space="preserve">
+              <path class="svg-logo"
+                d="M 0,0.663 9.401,0.663 15.882,7.146 15.882,14.127 5.307,3.608 5.274,22.969 0,22.969 z">
+              </path>
+              <path class="svg-logo"
+                d="M 23.631,22.969 14.232,22.969 7.752,16.485 7.752,9.501 18.327,20.018 18.359,0.662 23.631,0.662 z"></path>
+            </svg>
+          </a>
+          <div class="top-nav__list__wrapper">
+            <div class="top-nav__list__container">
+              <ul class="top-nav__list">
+                <li class="dropdown">
+                  <a class="top-nav__link capabilities" href="#">Capabilities</a>
+                  <svg width="8" height="5" viewBox="0 0 8 5" id="">
+                    <path class="chevron" d="M4 3.028L1.215 0 0 1.163 4 5l4-3.837L6.785 0z"></path>
+                  </svg>
+                  <!-- submenu  -->
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="#">Develop</a>
+                    </li>
+                    <li>
+                      <a href="#">Design</a>
+                    </li>
+                    <li>
+                      <a href="#">Technology</a>
+                    </li>
+                  </ul>
+                  <!-- dropdown -->
+                  <div class="dropdown-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col">
+                          <h1>Capabilities</h1>
+                          <p>Motivated to produce results.</p>
+                        </div>
+                        <div class="col">
+                          <h3>Develop</h3>
+                          <p>Best practices and optimized solutions for performant digital products.</p>
+                          <a href="#" class="btn">Learn More</a>
+                        </div>
+                        <div class="col">
+                          <h3>Design</h3>
+                          <p>Dynamic responsive designs that are optimized across web, tablet and mobile.</p>
+                          <a href="#" class="btn">Learn More</a>
+                        </div>
+                        <div class="col">
+                          <h3>Technology</h3>
+                          <p>Modern frameworks and integration with back-end data sources and api’s.</p>
+                          <a href="#" class="btn">Learn More</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a class="top-nav__link" href="#about">About</a>
+                </li>
+                <li>
+                  <a class="top-nav__link" href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a class="top-nav__link cta" href="mailto:noel.thomson@gmail.com">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="top-nav__mobile-toggle">
+            <div class="top-nav__hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       </div>
+    </nav>
+
+    <section id="hero">
+      <div class="video-container">
+        <video class="video-react-video" muted="" preload="auto" loop="" autoplay=""
+          poster="./imgs/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-0.jpg" tabindex="-1">
+          <source src="./imgs/video/mixkit-top-aerial-shot-of-seashore-with-rocks-1090.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="content-container">
+        <h1>Noel Thomson</h1>
+        <h3>Front End Engineer</h3>
+        <a href="#spacer" class="btn">Learn More</a>
+      </div>
       <div class="slant"></div>
-      <div class="slant"></div>
+      <div class="slant-2"></div>
+      <a href="#about">
+        <div class="arrow-container">
+          <img src="./imgs/arrow/arrow1.png" alt="">
+        </div>
+      </a>
     </section>
 
-    <!-- <section id="hero">
-      <h1>Noel Thomson</h1>
-      <h2>Web Developer</h2>
-    </section> -->
-
     <main id="mainContent">
+
       <section id="about">
-        <div class="container-fluid">
-          <h1 id="section-heading">
+        <div class="container">
+          <h1 class="section-heading">
             <span class="text__underline">
               About Me
               <span class="underline"></span>
@@ -129,7 +155,7 @@
                 Highly conversant with modern languages and frameworks including React,
                 ES6 JavaScript, Sass/CSS3, HTML5, Express, NodeJS and MongoDB.
                 I am always seeking opportunities to create high quality
-                products that help businesses succeed and enrich users. <br/>
+                products that help businesses succeed and enrich users.
                 Below are recent projects that showcase my skill set.
               </p>
             </div>
@@ -137,16 +163,11 @@
         </div>
         <div class="slant"></div>
         <div class="slant"></div>
-        <a href="#about">
-          <div class="arrow-container">
-            <img src="./imgs/arrow/arrow1.png" alt="">
-          </div>
-        </a>
       </section>
       
-      <section class="container-fluid" id="portfolio">
+      <section id="portfolio">
         <div id="portfolio__container">
-          <h1 id="section-heading">
+          <h1 class="section-heading">
             <span class="text__underline">
               Portfolio
               <span class="underline"></span>
@@ -166,9 +187,6 @@
             <li>
               <a href="#" data-filter=".js" class="filter button">Javascript</a>
             </li>
-            <!-- <li>
-              <a href="#" data-filter=".api" class="filter button">API</a>
-            </li> -->
             <li>
               <a href="#" data-filter=".fullstack" class="filter button">Fullstack</a>
             </li>
@@ -188,7 +206,7 @@
                       <img src="./imgs/card-icons/apple.png" alt="">
                       <p class="item__title">Apple Landing Page</p>
                       <p>Apple's Homepage Recreated</p>
-                      <p>HTML • Sass • Responsive</p>
+                      <p>HTML • Sass</p>
                       <div class="card-face-back-links">
                         <a href="https://noel-thomson.github.io/apple-landing/" target="blank">
                           View Project
@@ -263,7 +281,7 @@
                       <img src="./imgs/card-icons/shop.png" alt="">
                       <p class="item__title">E-Commerce Store</p>
                       <p class="item__description">Purchase Tech Products</p>
-                      <p class="item__description">React • Redux • Express • MongoDB</p>
+                      <p class="item__description">React/Redux • Express • MongoDB</p>
                       <div class="card-face-back-links">
                         <a href="https://mern-pro-shop.herokuapp.com/" target="blank">
                           View Project
@@ -288,7 +306,7 @@
                       <img src="./imgs/card-icons/photo.png" alt="">
                       <p class="item__title">Photography Generator</p>
                       <p class="item__description">Search Engine for HD Photos</p>
-                      <p class="item__description">Javascript • Sass • API</p>
+                      <p class="item__description">Javascript • Sass</p>
                       <div class="card-face-back-links">
                         <a href="https://noel-thomson.github.io/stock-photography-generator/" target="blank">
                           View Project
@@ -327,7 +345,7 @@
                   </div>
                 </div>
               </li>
-              <li class="item react">
+              <li class="item react js">
                   <div class="card-wrapper">
                     <div class="card-container">
                       <div class="card-face card-face-front">
@@ -339,7 +357,7 @@
                         <img src="./imgs/card-icons/timer.png" alt="">
                         <p class="item__title">Pomodoro Timer</p>
                         <p class="item__description">Time Management Tool</p>
-                        <p class="item__description">React</p>
+                        <p class="item__description">React • Javascript</p>
                         <div class="card-face-back-links">
                           <a href="https://festive-blackwell-0f363b.netlify.app/" target="blank">
                             View Project
@@ -406,50 +424,6 @@
                     </div>
                   </div>
               </li>
-              <!-- <li class="item pages">
-                  <div class="card-wrapper">
-                    <div class="card-container">
-                      <div class="card-face card-face-front">
-                        <div class="card-img-container">
-                          <img class="card-img" src="./imgs/mockups/kayak.jpg" alt="">
-                        </div>
-                      </div>
-                      <div class="card-face card-face-back">
-                        <img src="./imgs/card-icons/email.png" alt="">
-                        <p class="item__title">Kayak Campaign</p>
-                        <p class="item__description">HTML Email</p>
-                        <p class="item__description">HTML • Sass</p>
-                        <a href="https://noel-thomson.github.io/kayak-email-campaign/"
-                    target="blank">
-                          View Project
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-              </li> -->
-              <!-- <li class="item apps">
-                <div class="item__wrapper">
-                  <a
-                    href="https://noel-thomson.github.io/movie-database-app/"
-                    target="blank"
-                  >
-                    <img
-                      class="item__image"
-                      src="./imgs/mockups/mockup-movie-db.jpg"
-                      alt=""
-                    />
-                    <img
-                      class="item__icon"
-                      src="./imgs/overlay-icons/smartphone-call.svg"
-                      alt=""
-                    />
-                  </a>
-                </div>
-                <div class="item__info__container">
-                  <p class="item__title">Movie Search Database</p>
-                  <p class="item__description">API Application</p>
-                </div>
-              </li> -->
             </ul>
           </div>
         </div>
@@ -467,11 +441,11 @@
         </a>
       </section>
 
-      <section class="container-fluid" id="capabilities">
+      <section class="container" id="capabilities">
         <div
           class="capabilities__container"
         >
-          <h1 id="section-heading">
+          <h1 class="section-heading">
             <span class="text__underline">
               Capabilities
               <span class="underline"></span>
@@ -484,27 +458,6 @@
             experience, I'm an agile collaborator who is 
             highly motivated to produce results.
           </p>
-
-          <!-- <div id="info-icons">
-            <div class="info-icons__container">
-              <div class="info-icon">
-                <img src="./imgs/info-icons/prototype.png" alt="" />
-                <p>Design</p>
-              </div>
-              <div class="info-icon">
-                <img src="./imgs/info-icons/laptop.png" alt="" />
-                <p>Create</p>
-              </div>
-              <div class="info-icon">
-                <img src="./imgs/info-icons/responsive.png" alt="" />
-                <p>Test</p>
-              </div>
-              <div class="info-icon">
-                <img src="./imgs/info-icons/goal.png" alt="" />
-                <p>Deploy</p>
-              </div>
-            </div>
-          </div> -->
 
           <div id="tech-icons">
             <div class="tech-icons__container">
@@ -525,9 +478,7 @@
 
       <section id="contact">
         <div class="button__container">
-          <a href="./resume/noel-thomson-resume.pdf" download class="button"
-            >Download Resume</a
-          >
+          <a href="./resume/noel-thomson-resume.pdf" download class="button">Download Resume</a>
           <a href="mailto:noel.thomson@gmail.com" class="button">Contact</a>
         </div>
       </section>
@@ -542,36 +493,10 @@
           <i class="fab fa-github-square"></i>
         </a>
         <p>
-          <a href="mailto:noel.thomson@gmail.com">&copy 2020 Noel Thomson</a>
+          <a href="mailto:noel.thomson@gmail.com">&copy 2020 Noel Thomson. All rights reserved</a>
         </p>
       </div>
     </footer>
-    
-    <!-- particle scripts -->
-    <script src="./js/particles.js"></script>
-    <!-- <script src="./js/polygons.js"></script> -->
-    <script src="./js/particles-app.js"></script>
-    
-    <!-- particle js -->
-    <script>
-      var count_particles, stats, update;
-      stats = new Stats;
-      stats.setMode(0);
-      stats.domElement.style.position = 'absolute';
-      stats.domElement.style.left = '0px';
-      stats.domElement.style.top = '0px';
-      document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector('.js-count-particles');
-      update = function () {
-        stats.begin();
-        stats.end();
-        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-        }
-        requestAnimationFrame(update);
-      };
-      requestAnimationFrame(update);
-    </script>
 
     <!-- images ready -->
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
@@ -579,6 +504,6 @@
     <!-- isotope plugin -->
     <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
 
-    <script src="./js/script.js"></script>
+    <script src="./dist/js/main.js"></script>
   </body>
 </html>
