@@ -105,46 +105,48 @@
 }
 
 // animations
-h1 {
-  animation: leftIn 0.75s ease;
-  animation-fill-mode: forwards;
-}
-@keyframes leftIn {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
+#hero {
+  h1 {
+    animation: leftIn 0.75s ease;
+    animation-fill-mode: forwards;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  @keyframes leftIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
-}
-h3 {
-  animation: rightIn 0.75s ease 0.3s;
-  animation-fill-mode: forwards;
-}
-@keyframes rightIn {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
+  h3 {
+    animation: rightIn 0.75s ease 0.3s;
+    animation-fill-mode: forwards;
   }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
+  @keyframes rightIn {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
-}
-.btn {
-  animation: upIn 0.75s ease 0.6s;
-  animation-fill-mode: forwards;
-}
-@keyframes upIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
+  .btn {
+    animation: upIn 0.75s ease 0.6s;
+    animation-fill-mode: forwards;
   }
-  100% {
-    opacity: 0.85;
-    transform: translateY(0);
+  @keyframes upIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 0.85;
+      transform: translateY(0);
+    }
   }
 }
 

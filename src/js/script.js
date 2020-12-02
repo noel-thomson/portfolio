@@ -1,7 +1,5 @@
 const mobileToggle = document.querySelector('.top-nav__mobile-toggle');
-const header = document.querySelector('header');
 const filters = document.querySelectorAll('.filter');
-const navLinks = document.querySelectorAll('.top-nav__link');
 const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 800,
   speedAsDuration: true,
@@ -9,18 +7,6 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 let currentFilter = document.querySelector('.filter.current');
-
-mobileToggle.addEventListener('click', function () {
-  header.classList.toggle('open');
-});
-
-for (const navLink of navLinks) {
-  navLink.addEventListener('click', function () {
-    if (header.classList.contains('open')) {
-      header.classList.toggle('open');
-    }
-  });
-}
 
 for (const el of filters) {
   el.addEventListener('click', function () {

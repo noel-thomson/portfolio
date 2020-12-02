@@ -2,6 +2,7 @@
 const navbar = document.querySelector('#navbar');
 const mobileToggle = document.querySelector('.top-nav__mobile-toggle');
 const navLinks = document.querySelectorAll('.top-nav__link');
+const subMenuLinks = document.querySelectorAll('.sub-menu__link');
 const body = document.querySelector('body');
 
 mobileToggle.addEventListener('click', () => {
@@ -19,6 +20,12 @@ for (let navLink of navLinks) {
     }
   });
 }
+for (let subLink of subMenuLinks) {
+  subLink.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+    body.classList.toggle('freeze');
+  });
+}
 
 let prevScrollPos = window.pageYOffset;
 window.onscroll = () => {
@@ -29,15 +36,19 @@ window.onscroll = () => {
   }
   if (currentScrollPos === 0) {
     // top
-    navbar.classList.remove('white');
+    if (!dropdown.classList.contains('open')) {
+      navbar.classList.remove('white');
+    }
   } else if (prevScrollPos > currentScrollPos && currentScrollPos > 0) {
     // scroll up
     navbar.classList.remove('hide');
     navbar.classList.add('white');
+    dropdown.classList.remove('open');
   } else if (prevScrollPos < currentScrollPos) {
     // scroll down
     if (!navbar.classList.contains('open')) {
       navbar.classList.add('hide');
+      dropdown.classList.remove('open');
     }
   }
   prevScrollPos = currentScrollPos;
@@ -52,21 +63,21 @@ const capabilities = document.querySelector('.capabilities');
 about.addEventListener('mouseenter', () => {
   if (!navbar.classList.contains('open')) {
     navbar.classList.add('white');
-    dropdown.style.opacity = '1';
+    dropdown.classList.add('open');
   }
 });
 chevron.addEventListener('mouseenter', () => {
   if (!navbar.classList.contains('open')) {
     navbar.classList.add('white');
-    dropdown.style.opacity = '1';
+    dropdown.classList.add('open');
   }
 });
 dropdown.addEventListener('mouseleave', () => {
   if (!navbar.classList.contains('open')) {
-    dropdown.style.opacity = '0';
     if (window.pageYOffset === 0) {
       navbar.classList.remove('white');
     }
+    dropdown.classList.remove('open');
   }
 });
 capabilities.addEventListener('click', () => {
