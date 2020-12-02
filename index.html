@@ -92,7 +92,7 @@
                   <a class="top-nav__link" href="#portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <a class="top-nav__link cta" href="mailto:noel.thomson@gmail.com">Contact</a>
+                  <a class="top-nav__link cta" href="#form">Contact</a>
                 </li>
               </ul>
             </div>
@@ -121,7 +121,6 @@
         <a href="#about" class="btn">Learn More</a>
       </div>
       <div class="slant"></div>
-      <div class="slant-2"></div>
       <a href="#about">
         <div class="arrow-container">
           <img src="./imgs/arrow/arrow1.png" alt="">
@@ -155,7 +154,11 @@
           </div>
         </div>
         <div class="slant"></div>
-        <div class="slant"></div>
+        <a href="#portfolio">
+          <div class="arrow-container top-arrow">
+            <img src="./imgs/arrow/arrow1.png" alt="">
+          </div>
+        </a>
       </section>
       
       <section id="portfolio">
@@ -417,21 +420,15 @@
           </div>
         </div>
         <div class="slant"></div>
-        <div class="slant"></div>
-        <a href="#portfolio">
-          <div class="arrow-container top-arrow">
-            <img src="./imgs/arrow/arrow1.png" alt="">
-          </div>
-        </a>
         <a href="#capabilities">
-          <div class="arrow-container bottom-arrow">
+          <div class="arrow-container top-arrow">
             <img src="./imgs/arrow/arrow1.png" alt="">
           </div>
         </a>
       </section>
 
-      <section class="container" id="capabilities">
-        <div class="capabilities__container">
+      <section id="capabilities">
+        <div class="container">
           <h1 class="section-heading">
             <span class="text__underline">
               Capabilities
@@ -441,7 +438,7 @@
           
           <p class="desc capabilities__desc">
             A tenacious self-taught developer, I use constant iteration
-            to create and improve products. Front-end focused with full-stack 
+            to create and improve digital products. Front-end focused with full-stack 
             experience, I'm an agile collaborator who is 
             highly motivated to produce results.
           </p>
@@ -461,12 +458,66 @@
             </div>
           </div>
         </div>
+        <div class="slant"></div>
+        <a href="#form">
+          <div class="arrow-container top-arrow">
+            <img src="./imgs/arrow/arrow1.png" alt="">
+          </div>
+        </a>
+      </section>
+
+      <section id="form">
+        <div class="container">
+          <div class="copy__container">
+            <p>Let's work together</p>
+            <h4>How Can I Help?</h4>
+            <div class="title-line"></div>
+          </div>
+          <div class="container">
+            <form action="POST" data-netlify="true">
+              <p>Contact</p>
+              <div class="row">
+                <div class="form-input">
+                  <input id="name" type="text" name="name" required>
+                  <label for="name">Name:</label>
+                </div>
+                <div class="form-input">
+                  <input id="email" type="email" name="email" required>
+                  <label for="email">Email:</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-input">
+                  <input id="company" type="text" name="company" required>
+                  <label for="company">Company:</label>
+                </div>
+                <div class="form-input">
+                  <input id="phone" type="text" name="phone" required>
+                  <label for="phone">Phone:</label>
+                </div>
+              </div>
+              <div class="form-input">
+                <textarea id="message" name="message" required></textarea>
+                <label for="message">Message</label>
+              </div>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+        <div class="slant"></div>
+        <a href="#contact">
+          <div class="arrow-container top-arrow">
+            <img src="./imgs/arrow/arrow1.png" alt="">
+          </div>
+        </a>
       </section>
 
       <section id="contact">
-        <div class="button__container">
-          <a href="./resume/noel-thomson-resume.pdf" download class="button">Download Resume</a>
-          <a href="mailto:noel.thomson@gmail.com" class="button">Contact</a>
+        <div class="container">
+          <div class="button__container">
+            <a href="./resume/noel-thomson-resume.pdf" download class="button">Download Resume</a>
+            <a href="mailto:noel.thomson@gmail.com" class="button">Contact</a>
+          </div>
         </div>
       </section>
     </main>
@@ -480,7 +531,7 @@
           <i class="fab fa-github-square"></i>
         </a>
         <p>
-          <a href="mailto:noel.thomson@gmail.com">&copy 2020 Noel Thomson. All rights reserved.</a>
+          <a href="http://github.com/noel-thomson" target="blank">&copy 2020 Noel Thomson. All rights reserved.</a>
         </p>
       </div>
     </footer>

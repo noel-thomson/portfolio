@@ -1,8 +1,11 @@
 #capabilities {
   padding-top: 80px;
-  padding-bottom: 0;
-  .capabilities__container {
-    margin: 0 auto;
+  padding-bottom: 80px;
+  .slant {
+    background: #fbfbfb;
+  }
+  .container {
+    padding-bottom: 80px;
     .capabilities__desc {
       margin: 40px auto 0;
       max-width: 700px;
@@ -118,14 +121,6 @@
           margin: 15px 5px !important;
         }
       }
-    }
-  }
-}
-
-@media (max-width: 730px) {
-  .capabilities__desc {
-    br {
-      display: none;
     }
   }
 }

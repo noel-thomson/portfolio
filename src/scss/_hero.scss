@@ -14,8 +14,6 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    // background: url('https://mixkit.imgix.net/videos/preview/mixkit-top-aerial-shot-of-seashore-with-rocks-1090-0.jpg')
-    //   no-repeat center center/cover;
     &:after {
       content: '';
       height: 100%;
@@ -74,33 +72,6 @@
         color: black;
       }
     }
-  }
-}
-
-// clip paths
-#hero {
-  .slant {
-    clip-path: polygon(0 100%, 0 0, 105% 100%);
-    background-color: white;
-    position: absolute;
-    height: 5vh;
-    bottom: 0;
-    left: 0%;
-    width: 50%;
-    z-index: 1;
-  }
-  .slant-2 {
-    clip-path: polygon(-5% 100%, 100% 0, 100% 100%);
-    background-color: white;
-    position: absolute;
-    height: 5vh;
-    bottom: 0;
-    left: 50%;
-    width: 50%;
-    z-index: 1;
-  }
-  .arrow-container {
-    bottom: calc(0% - 15px);
   }
 }
 

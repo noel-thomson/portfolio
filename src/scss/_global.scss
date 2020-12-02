@@ -176,3 +176,19 @@ body {
     transform: translate(-50%, 0px);
   }
 }
+
+section {
+  .slant {
+    clip-path: polygon(0% 100%, 100% 0, 100% 100%);
+    background-color: white;
+    position: absolute;
+    height: 80px;
+    bottom: -1px;
+    left: 0%;
+    width: 100%;
+    z-index: 1;
+  }
+  .arrow-container {
+    bottom: 16px;
+  }
+}

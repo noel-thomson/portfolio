@@ -2,12 +2,8 @@
   padding-bottom: 80px;
   position: relative;
   width: 100%;
-  .arrow-container {
-    top: -30px;
-  }
-
   .container {
-    padding-bottom: 80px;
+    padding-bottom: 100px;
     .section-heading {
       margin-bottom: 60px;
     }
@@ -36,17 +32,7 @@
     }
   }
   .slant {
-    clip-path: polygon(0 100%, 0 0, 100% 100%);
     background-color: #fbfbfb;
-    height: 5vh;
-    width: 50%;
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-  }
-  .slant:nth-of-type(2) {
-    clip-path: polygon(0 100%, 100% 0, 100% 100%);
-    left: 50%;
   }
 }
 

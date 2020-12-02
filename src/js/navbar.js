@@ -16,6 +16,7 @@ for (let navLink of navLinks) {
     if (navbar.classList.contains('open')) {
       if (!navLink.classList.contains('capabilities')) {
         navbar.classList.toggle('open');
+        body.classList.toggle('freeze');
       }
     }
   });
