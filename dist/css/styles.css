@@ -574,7 +574,7 @@ body.freeze {
       width: 100%;
       top: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.3);
       position: absolute; }
     #hero .video-container video {
       min-width: 100%;
