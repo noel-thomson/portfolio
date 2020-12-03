@@ -1014,19 +1014,17 @@ body.freeze {
     background-color: #fbfbfb; }
 
 @media (max-width: 768px) {
-  #about .container .about__container {
+  #capabilities .container .about__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; }
-    #about .container .about__container .about__image__container {
+    #capabilities .container .about__container .about__image__container {
       margin-bottom: 30px;
       margin-right: 20px; }
-    #about .container .about__container .about__text__container {
+    #capabilities .container .about__container .about__text__container {
       margin-left: 10px;
-      margin-right: 10px; }
-      #about .container .about__container .about__text__container p {
-        font-size: 18px; } }
+      margin-right: 10px; } }
 
 #form {
   background-color: #fbfbfb;
