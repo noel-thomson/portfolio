@@ -178,13 +178,14 @@ body {
   }
 }
 
+// slant
 section {
   .slant {
     clip-path: polygon(0% 100%, 100% 0, 100% 100%);
     background-color: white;
     position: absolute;
     height: 80px;
-    bottom: -1px;
+    bottom: 0;
     left: 0%;
     width: 100%;
     z-index: 1;
