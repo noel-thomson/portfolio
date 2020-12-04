@@ -20,6 +20,7 @@ body {
   height: 100%;
   color: $main-color;
   overscroll-behavior: none;
+  position: relative; //
 }
 
 main {
@@ -192,5 +193,21 @@ section {
   }
   .arrow-container {
     bottom: 16px;
+  }
+}
+
+// portfolio button
+.portfolio-button {
+  padding: 10px 10px;
+  margin: 0 8px;
+  color: #2979ff;
+  border: 1px solid #2979ff;
+  border-radius: 5px;
+  width: 120px;
+  transition: all 0.5s ease;
+  &:hover {
+    color: white;
+    background: #2979ff;
+    border: 1px solid #2979ff;
   }
 }

@@ -14,7 +14,8 @@ body {
   height: 100%;
   color: #3a3a3a;
   -ms-scroll-chaining: none;
-      overscroll-behavior: none; }
+      overscroll-behavior: none;
+  position: relative; }
 
 main {
   overflow-x: hidden; }
@@ -173,6 +174,19 @@ section .slant {
 
 section .arrow-container {
   bottom: 16px; }
+
+.portfolio-button {
+  padding: 10px 10px;
+  margin: 0 8px;
+  color: #2979ff;
+  border: 1px solid #2979ff;
+  border-radius: 5px;
+  width: 120px;
+  transition: all 0.5s ease; }
+  .portfolio-button:hover {
+    color: white;
+    background: #2979ff;
+    border: 1px solid #2979ff; }
 
 @font-face {
   font-family: 'SF Pro Display';
@@ -1006,8 +1020,7 @@ body.freeze {
         padding: 20px;
         padding-left: 0; }
         #capabilities .container .about__container .about__text__container a {
-          color: #22509f;
-          font-weight: 300; }
+          color: #22509f; }
           #capabilities .container .about__container .about__text__container a:hover {
             color: #2979ff; }
   #capabilities .slant {
@@ -1240,3 +1253,62 @@ footer {
         font-weight: 400;
         font-size: 12px;
         opacity: 0.8; }
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10; }
+  #modal .container {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% - 100px));
+    transition: all 0.5s ease-in-out;
+    width: 550px;
+    padding: 60px;
+    padding-bottom: 70px;
+    position: absolute;
+    background: white;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.2); }
+    #modal .container .modal-heading {
+      font-weight: 400;
+      font-size: 32px;
+      margin-bottom: 20px; }
+    #modal .container .modal-body {
+      margin-bottom: 40px;
+      font-size: 18px;
+      line-height: 1.9;
+      letter-spacing: 0.5px; }
+    #modal .container .row {
+      justify-content: center; }
+      #modal .container .row .portfolio-button:nth-of-type(2) {
+        padding: 10px 17px; }
+    #modal .container .modal-close {
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      height: 25px;
+      width: 25px;
+      cursor: pointer; }
+      #modal .container .modal-close img {
+        height: 100%; }
+
+#modal.reveal {
+  z-index: 10; }
+  #modal.reveal .container {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+
+#modal.reveal.fade {
+  z-index: 10; }
+  #modal.reveal.fade .container {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% - 100px)); }
+
+@media (max-width: 600px) {
+  #modal .container {
+    width: 90vw; } }
