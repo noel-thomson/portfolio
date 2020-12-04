@@ -10,6 +10,8 @@
     transform: translate(-50%, calc(-50% - 100px));
     transition: all 0.5s ease-in-out;
     width: 550px;
+    max-height: 90vh;
+    overflow: scroll;
     padding: 60px;
     padding-bottom: 70px;
     position: absolute;
@@ -66,10 +68,6 @@
 @media (max-width: 600px) {
   #modal .container {
     width: 90vw;
+    padding: 20px;
   }
 }
-// @media (max-height: 800px) {
-//   #modal .container {
-
-//   }
-// }
