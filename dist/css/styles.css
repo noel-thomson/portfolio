@@ -1267,7 +1267,7 @@ footer {
     transition: all 0.5s ease-in-out;
     width: 550px;
     max-height: 90vh;
-    overflow: scroll;
+    overflow: auto;
     padding: 60px;
     padding-bottom: 70px;
     position: absolute;
