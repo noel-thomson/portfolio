@@ -1,8 +1,9 @@
 const modal = document.querySelector('#modal');
+const modalContainer = document.querySelector('#modal .container');
 const modalHeading = document.querySelector('.modal-heading');
 const modalBody = document.querySelector('.modal-body');
 const modalButtons = document.querySelectorAll('#modal .portfolio-button');
-const modalClose = document.querySelector('.modal-close');
+const modalX = document.querySelector('.modal-close');
 const portfolioLinks = document.querySelectorAll(
   '.card-face-back-links a:first-of-type'
 );
@@ -15,6 +16,7 @@ for (let link of portfolioLinks) {
   });
 }
 
+// generate modal content
 for (let i = 0; i < portfolioLinks.length; i++) {
   portfolioLinks[i].addEventListener('click', () => {
     body.classList.add('freeze');
@@ -26,11 +28,39 @@ for (let i = 0; i < portfolioLinks.length; i++) {
   });
 }
 
-modalClose.addEventListener('click', () => {
+// close modal by clicking X
+modalX.addEventListener('click', () => {
   modal.classList.add('fade');
   body.classList.remove('freeze');
   setTimeout(() => {
     modal.classList.remove('fade');
     modal.classList.remove('reveal');
   }, 510);
+});
+
+// click outside modal to close
+modal.addEventListener('click', (e) => {
+  let isClickInside = modalContainer.contains(e.target);
+  if (modal.classList.contains('reveal')) {
+    if (!isClickInside) {
+      modal.classList.add('fade');
+      body.classList.remove('freeze');
+      setTimeout(() => {
+        modal.classList.remove('fade');
+        modal.classList.remove('reveal');
+      }, 510);
+    }
+  }
+});
+
+// use escape key to close
+document.addEventListener('keydown', (e) => {
+  if (e.key == 'Escape') {
+    modal.classList.add('fade');
+    body.classList.remove('freeze');
+    setTimeout(() => {
+      modal.classList.remove('fade');
+      modal.classList.remove('reveal');
+    }, 510);
+  }
 });
