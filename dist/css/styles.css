@@ -167,7 +167,7 @@ section .slant {
   background-color: white;
   position: absolute;
   height: 80px;
-  bottom: 0;
+  bottom: -1px;
   left: 0%;
   width: 100%;
   z-index: 1; }
